@@ -8,6 +8,7 @@ import {
   PersonalityTraitModule,
 } from "./modules/personalitytraits";
 import { Sex, SexesModule } from "./modules/sexes";
+import { SocialClass, SocialClassesModule } from "./modules/socialclasses";
 import { Surname, SurnamesModule } from "./modules/surnames";
 
 interface Character {
@@ -19,6 +20,7 @@ interface Character {
   hairStyle: HairStyle;
   occupation: Occupation;
   personalityTraits: PersonalityTrait[];
+  socialClass: SocialClass;
 }
 
 class CharacterForge {
@@ -30,6 +32,7 @@ class CharacterForge {
   private hairStylesModule: HairStylesModule;
   private occupationsModule: OccupationsModule;
   private personalityTraitsModule: PersonalityTraitModule;
+  private socialClassModule: SocialClassesModule;
 
   constructor() {
     this.namesModule = new NamesModule();
@@ -40,6 +43,7 @@ class CharacterForge {
     this.hairStylesModule = new HairStylesModule();
     this.occupationsModule = new OccupationsModule();
     this.personalityTraitsModule = new PersonalityTraitModule();
+    this.socialClassModule = new SocialClassesModule();
   }
 
   public forge(): Character {
@@ -51,6 +55,7 @@ class CharacterForge {
     const hairStyle = this.hairStylesModule.getRandomHairStyle();
     const occupation = this.occupationsModule.getRandomOccupation();
     const personalityTraits = this.personalityTraitsModule.pickRandomTrait(5);
+    const socialClass = this.socialClassModule.getRandomSocialClass();
 
     const character: Character = {
       name,
@@ -61,6 +66,7 @@ class CharacterForge {
       hairStyle,
       occupation,
       personalityTraits,
+      socialClass,
     };
 
     return character;
