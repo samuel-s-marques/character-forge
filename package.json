@@ -2,7 +2,8 @@
   "name": "characterforge",
   "version": "1.0.0",
   "description": "A powerful Node.js/TypeScript package for generating procedural characters with randomized attributes like name, surname, sex, gender, personality traits and more.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/index.js",
