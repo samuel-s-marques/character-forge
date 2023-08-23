@@ -20,7 +20,9 @@
     "random",
     "attributes",
     "node.js",
-    "typescript"
+    "typescript",
+    "procedural",
+    "modular"
   ],
   "author": "Samuel Marques",
   "license": "MIT",
