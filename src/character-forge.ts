@@ -4,9 +4,11 @@ import { HairStyle, HairStylesModule } from "./modules/hairstyles";
 import { Name, NamesModule } from "./modules/names";
 import { Occupation, OccupationsModule } from "./modules/occupations";
 import { Sex, SexesModule } from "./modules/sexes";
+import { Surname, SurnamesModule } from "./modules/surnames";
 
 interface Character {
   name: Name;
+  surname: Surname;
   sex: Sex;
   hairColor: HairColor;
   eyeColor: EyeColor;
@@ -16,6 +18,7 @@ interface Character {
 
 class CharacterForge {
   private namesModule: NamesModule;
+  private surnamesModule: SurnamesModule;
   private sexesModule: SexesModule;
   private hairColorsModule: HairColorsModule;
   private eyeColorsModule: EyeColorsModule;
@@ -24,6 +27,7 @@ class CharacterForge {
 
   constructor() {
     this.namesModule = new NamesModule();
+    this.surnamesModule = new SurnamesModule();
     this.sexesModule = new SexesModule();
     this.hairColorsModule = new HairColorsModule();
     this.eyeColorsModule = new EyeColorsModule();
@@ -34,6 +38,7 @@ class CharacterForge {
   public forge(): Character {
     const sex = this.sexesModule.getRandomSex();
     const name = this.namesModule.getRandomName(sex);
+    const surname = this.surnamesModule.getRandomSurname();
     const hairColor = this.hairColorsModule.getRandomHairColor();
     const eyeColor = this.eyeColorsModule.getRandomEyeColor();
     const hairStyle = this.hairStylesModule.getRandomHairStyle();
@@ -41,6 +46,7 @@ class CharacterForge {
 
     const character: Character = {
       name,
+      surname,
       sex,
       hairColor,
       eyeColor,
