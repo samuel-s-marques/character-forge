@@ -1,0 +1,306 @@
+{
+    "data": [
+        {
+            "name": "introvert",
+            "contradictions": [
+                "extrovert"
+            ]
+        },
+        {
+            "name": "extrovert",
+            "contradictions": [
+                "introvert"
+            ]
+        },
+        {
+            "name": "optimistic",
+            "contradictions": [
+                "pessimistic"
+            ]
+        },
+        {
+            "name": "pessimistic",
+            "contradictions": [
+                "optimistic"
+            ]
+        },
+        {
+            "name": "confident",
+            "contradictions": [
+                "insecure"
+            ]
+        },
+        {
+            "name": "insecure",
+            "contradictions": [
+                "confident"
+            ]
+        },
+        {
+            "name": "patient",
+            "contradictions": [
+                "impatient"
+            ]
+        },
+        {
+            "name": "impatient",
+            "contradictions": [
+                "patient"
+            ]
+        },
+        {
+            "name": "ambitious",
+            "contradictions": [
+                "content"
+            ]
+        },
+        {
+            "name": "logical",
+            "contradictions": [
+                "emotional"
+            ]
+        },
+        {
+            "name": "content",
+            "contradictions": [
+                "ambitious"
+            ]
+        },
+        {
+            "name": "emotional",
+            "contradictions": [
+                "logical"
+            ]
+        },
+        {
+            "name": "open-minded",
+            "contradictions": [
+                "closed-minded"
+            ]
+        },
+        {
+            "name": "closed-minded",
+            "contradictions": [
+                "open-minded"
+            ]
+        },
+        {
+            "name": "organized",
+            "contradictions": [
+                "disorganized"
+            ]
+        },
+        {
+            "name": "disorganized",
+            "contradictions": [
+                "organized"
+            ]
+        },
+        {
+            "name": "spontaneous",
+            "contradictions": [
+                "methodical"
+            ]
+        },
+        {
+            "name": "methodical",
+            "contradictions": [
+                "spontaneous"
+            ]
+        },
+        {
+            "name": "assertive",
+            "contradictions": [
+                "passive"
+            ]
+        },
+        {
+            "name": "passive",
+            "contradictions": [
+                "assertive"
+            ]
+        },
+        {
+            "name": "empathetic",
+            "contradictions": [
+                "apathetic"
+            ]
+        },
+        {
+            "name": "apathetic",
+            "contradictions": [
+                "empathetic"
+            ]
+        },
+        {
+            "name": "creative",
+            "contradictions": [
+                "practical"
+            ]
+        },
+        {
+            "name": "pratical",
+            "contradictions": [
+                "creative"
+            ]
+        },
+        {
+            "name": "humble",
+            "contradictions": [
+                "arrogant"
+            ]
+        },
+        {
+            "name": "arrogant",
+            "contradictions": [
+                "humble"
+            ]
+        },
+        {
+            "name": "curious",
+            "contradictions": [
+                "indifferent"
+            ]
+        },
+        {
+            "name": "indifferent",
+            "contradictions": [
+                "curious"
+            ]
+        },
+        {
+            "name": "sociable",
+            "contradictions": [
+                "reclusive"
+            ]
+        },
+        {
+            "name": "reclusive",
+            "contradictions": [
+                "sociable"
+            ]
+        },
+        {
+            "name": "reliable",
+            "contradictions": [
+                "unpredictable"
+            ]
+        },
+        {
+            "name": "unpredictable",
+            "contradictions": [
+                "reliable"
+            ]
+        },
+        {
+            "name": "detail-oriented",
+            "contradictions": [
+                "big-picture thinker"
+            ]
+        },
+        {
+            "name": "big-picture thinker",
+            "contradictions": [
+                "detail-oriented"
+            ]
+        },
+        {
+            "name": "flexible",
+            "contradictions": [
+                "stubborn"
+            ]
+        },
+        {
+            "name": "stubborn",
+            "contradictions": [
+                "flexible"
+            ]
+        },
+        {
+            "name": "energetic",
+            "contradictions": [
+                "lethargic"
+            ]
+        },
+        {
+            "name": "lethargic",
+            "contradictions": [
+                "energetic"
+            ]
+        },
+        {
+            "name": "independent",
+            "contradictions": [
+                "dependent"
+            ]
+        },
+        {
+            "name": "dependent",
+            "contradictions": [
+                "independent"
+            ]
+        },
+        {
+            "name": "analytical",
+            "contradictions": [
+                "intuitive"
+            ]
+        },
+        {
+            "name": "intuitive",
+            "contradictions": [
+                "analytic"
+            ]
+        },
+        {
+            "name": "self-disciplined",
+            "contradictions": [
+                "procrastinating"
+            ]
+        },
+        {
+            "name": "procrastinating",
+            "contradictions": [
+                "self-disciplined"
+            ]
+        },
+        {
+            "name": "honest",
+            "contradictions": [
+                "deceptive"
+            ]
+        },
+        {
+            "name": "deceptive",
+            "contradictions": [
+                "honest"
+            ]
+        },
+        {
+            "name": "generous",
+            "contradictions": [
+                "selfish"
+            ]
+        },
+        {
+            "name": "selfish",
+            "contradictions": [
+                "generous"
+            ]
+        },
+        {
+            "name": "adventurous",
+            "contradictions": [
+                "cautious"
+            ]
+        },
+        
+        {
+            "name": "cautious",
+            "contradictions": [
+                "adventurous"
+            ]
+        }
+    ],
+    "count": 50
+}
