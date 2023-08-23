@@ -21,7 +21,7 @@ export class PersonalityTraitModule {
       const newTrait = personalityTraitData[randomIndex];
 
       if (this.isTraitValid(newTrait, selectedTraits)) {
-        if (!selectedTraits.some((trait) => trait.name === newTrait.name)) {
+        if (!selectedTraits.includes(newTrait.name)) {
           selectedTraits.push(newTrait.name);
         }
       }
