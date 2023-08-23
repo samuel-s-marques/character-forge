@@ -1,7 +1,7 @@
 {
-  "name": "characterforge",
+  "name": "character-forge",
   "version": "1.0.0",
-  "description": "A powerful Node.js/TypeScript package for generating procedural characters with randomized attributes like name, surname, sex, gender, personality traits and more.",
+  "description": "A powerful NPM package for generating procedural characters with randomized attributes like name, surname, sex, gender, personality traits and more.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
