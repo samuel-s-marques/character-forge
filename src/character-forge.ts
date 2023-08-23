@@ -3,6 +3,10 @@ import { HairColor, HairColorsModule } from "./modules/haircolors";
 import { HairStyle, HairStylesModule } from "./modules/hairstyles";
 import { Name, NamesModule } from "./modules/names";
 import { Occupation, OccupationsModule } from "./modules/occupations";
+import {
+  PersonalityTrait,
+  PersonalityTraitModule,
+} from "./modules/personalitytraits";
 import { Sex, SexesModule } from "./modules/sexes";
 import { Surname, SurnamesModule } from "./modules/surnames";
 
@@ -14,6 +18,7 @@ interface Character {
   eyeColor: EyeColor;
   hairStyle: HairStyle;
   occupation: Occupation;
+  personalityTraits: PersonalityTrait[];
 }
 
 class CharacterForge {
@@ -24,6 +29,7 @@ class CharacterForge {
   private eyeColorsModule: EyeColorsModule;
   private hairStylesModule: HairStylesModule;
   private occupationsModule: OccupationsModule;
+  private personalityTraitsModule: PersonalityTraitModule;
 
   constructor() {
     this.namesModule = new NamesModule();
@@ -33,6 +39,7 @@ class CharacterForge {
     this.eyeColorsModule = new EyeColorsModule();
     this.hairStylesModule = new HairStylesModule();
     this.occupationsModule = new OccupationsModule();
+    this.personalityTraitsModule = new PersonalityTraitModule();
   }
 
   public forge(): Character {
@@ -43,6 +50,7 @@ class CharacterForge {
     const eyeColor = this.eyeColorsModule.getRandomEyeColor();
     const hairStyle = this.hairStylesModule.getRandomHairStyle();
     const occupation = this.occupationsModule.getRandomOccupation();
+    const personalityTraits = this.personalityTraitsModule.pickRandomTrait(5);
 
     const character: Character = {
       name,
@@ -52,6 +60,7 @@ class CharacterForge {
       eyeColor,
       hairStyle,
       occupation,
+      personalityTraits,
     };
 
     return character;
