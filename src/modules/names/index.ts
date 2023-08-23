@@ -1,5 +1,5 @@
-import path = require("path");
 import { processFile } from "../../utils/utils";
+import { Sex } from "../sexes";
 
 export interface Name {}
 
@@ -8,10 +8,10 @@ export class NamesModule {
     return processFile("names")["data"];
   }
 
-  public getRandomName(sex: string): Name {
-    const names = this.loadNamesData().find((entry: { [x: string]: any }) => entry[sex]);
-    const randomIndex = Math.floor(Math.random() * names[sex].length)
+  public getRandomName(sex: Sex): Name {
+    const names = this.loadNamesData().find((entry: { [x: string]: any }) => entry[sex.toString()]);
+    const randomIndex = Math.floor(Math.random() * names[sex.toString()].length)
 
-    return names[sex][randomIndex];
+    return names[sex.toString()][randomIndex];
   }
 }
