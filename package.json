@@ -1,0 +1,29 @@
+{
+  "name": "characterforge",
+  "version": "1.0.0",
+  "description": "A powerful Node.js/TypeScript package for generating procedural characters with randomized attributes like name, surname, sex, gender, personality traits and more.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuel-s-marques/character-forge.git"
+  },
+  "keywords": [
+    "procedural",
+    "generation",
+    "character",
+    "generator",
+    "random",
+    "attributes",
+    "node.js",
+    "typescript"
+  ],
+  "author": "Samuel Marques",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samuel-s-marques/character-forge/issues"
+  },
+  "homepage": "https://github.com/samuel-s-marques/character-forge#readme"
+}
