@@ -6,8 +6,8 @@ export function generateRandomNumber(min: number, max: number): number {
 }
 
 export function processFile(file: string): any {
-  let filePath = path.join(process.cwd(), `data/${file}/${file}_en.json`);
-  let rawData = fs.readFileSync(filePath, "utf-8");
+  const filePath = path.join(__dirname, `../../data/${file}/${file}_en.json`);
+  const rawData = fs.readFileSync(filePath, "utf-8");
 
   return JSON.parse(rawData);
 }
