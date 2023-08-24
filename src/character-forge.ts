@@ -11,7 +11,7 @@ import { Sex, SexesModule } from "./modules/sexes";
 import { SocialClass, SocialClassesModule } from "./modules/socialclasses";
 import { Surname, SurnamesModule } from "./modules/surnames";
 
-interface Character {
+export interface Character {
   name: Name;
   surname: Surname;
   sex: Sex;
@@ -23,7 +23,7 @@ interface Character {
   socialClass: SocialClass;
 }
 
-class CharacterForge {
+export class CharacterForge {
   private namesModule: NamesModule;
   private surnamesModule: SurnamesModule;
   private sexesModule: SexesModule;
@@ -72,5 +72,3 @@ class CharacterForge {
     return character;
   }
 }
-
-export default CharacterForge;
