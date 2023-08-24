@@ -1,13 +1,12 @@
 {
   "name": "character-forge",
-  "version": "1.0.0",
+  "version": "1.0.9",
   "description": "A powerful NPM package for generating procedural characters with randomized attributes like name, surname, sex, gender, personality traits and more.",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/index.js",
-    "build": "tsc"
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json"
   },
   "repository": {
     "type": "git",
