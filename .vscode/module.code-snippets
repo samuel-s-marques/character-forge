@@ -1,0 +1,21 @@
+{
+	"Forge module": {
+		"scope": "javascript,typescript",
+		"prefix": "forgemod",
+		"description": "Generates a Forge Module",
+		"body": [
+			"export interface $1 {}",
+			"",
+			"export class $2sModule {",
+			"\tprivate load$1Data(): any {}",
+			"",
+			"\tpublic getRandom$1(): $1 {",
+			"\t\tconst $3s = this.load$1Data();",
+			"\t\tconst randomIndex = Math.floor(Math.random() * $3s.length);",
+			"",
+			"\t\treturn $3s[randomIndex];",
+			"\t}",
+			"}"
+		]
+	}
+}
