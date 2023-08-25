@@ -2,56 +2,194 @@
   "data": [
     {
       "male": [
-        "Alexander",
-        "Benjamin",
-        "Christopher",
-        "Daniel",
-        "Ethan",
-        "Felix",
-        "Gabriel",
-        "Henry",
-        "Isaac",
-        "Jacob",
-        "Kevin",
-        "Liam",
-        "Mason",
-        "Nathan",
-        "Oliver",
-        "Patrick",
-        "Quinn",
-        "Ryan",
-        "Samuel",
-        "Thomas",
-        "Ulysses",
-        "Victor",
-        "William",
-        "Xavier",
-        "Yosef",
-        "Zachary"
+        {
+          "name": "Alexander",
+          "nicknames": ["Alex"]
+        },
+        {
+          "name": "Benjamin",
+          "nicknames": ["Ben", "Benny"]
+        },
+        {
+          "name": "Christopher",
+          "nicknames": ["Chris"]
+        },
+        {
+          "name": "Daniel",
+          "nicknames": ["Dan", "Danny"]
+        },
+        {
+          "name": "Ethan",
+          "nicknames": []
+        },
+        {
+          "name": "Felix",
+          "nicknames": []
+        },
+        {
+          "name": "Gabriel",
+          "nicknames": ["Gabe"]
+        },
+        {
+          "name": "Henry",
+          "nicknames": []
+        },
+        {
+          "name": "Isaac",
+          "nicknames": ["Ike"]
+        },
+        {
+          "name": "Jacob",
+          "nicknames": ["Jay", "Jake"]
+        },
+        {
+          "name": "Kevin",
+          "nicknames": ["Kev"]
+        },
+        {
+          "name": "Liam",
+          "nicknames": []
+        },
+        {
+          "name": "Mason",
+          "nicknames": []
+        },
+        {
+          "name": "Nathan",
+          "nicknames": ["Nate"]
+        },
+        {
+          "name": "Oliver",
+          "nicknames": ["Ollie", ""]
+        },
+        {
+          "name": "Patrick",
+          "nicknames": []
+        },
+        {
+          "name": "Quinn",
+          "nicknames": []
+        },
+        {
+          "name": "Ryan",
+          "nicknames": []
+        },
+        {
+          "name": "Samuel",
+          "nicknames": ["Sam", "Sammy"]
+        },
+        {
+          "name": "Thomas",
+          "nicknames": ["Tom", "Tommy"]
+        },
+        {
+          "name": "Ulysses",
+          "nicknames": []
+        },
+        {
+          "name": "Victor",
+          "nicknames": ["Vic"]
+        },
+        {
+          "name": "William",
+          "nicknames": ["Willy", "Will", "Billy"]
+        },
+        {
+          "name": "Xavier",
+          "nicknames": []
+        },
+        {
+          "name": "Yosef",
+          "nicknames": []
+        },
+        {
+          "name": "Zachary",
+          "nicknames": ["Zack"]
+        }
       ]
     },
     {
       "female": [
-        "Emma",
-        "Olivia",
-        "Ava",
-        "Sophia",
-        "Mia",
-        "Isabella",
-        "Amelia",
-        "Harper",
-        "Evelyn",
-        "Abigail",
-        "Emily",
-        "Elizabeth",
-        "Sofia",
-        "Scarlett",
-        "Grace",
-        "Lily",
-        "Chloe",
-        "Victoria",
-        "Aria",
-        "Zoe"
+        {
+          "name": "Emma",
+          "nicknames": ["Em"]
+        },
+        {
+          "name": "Olivia",
+          "nicknames": ["Liv", "Ollie"]
+        },
+        {
+          "name": "Ava",
+          "nicknames": []
+        },
+        {
+          "name": "Sophia",
+          "nicknames": ["Soph", "Sophie"]
+        },
+        {
+          "name": "Mia",
+          "nicknames": []
+        },
+        {
+          "name": "Isabella",
+          "nicknames": ["Isa", "Bella"]
+        },
+        {
+          "name": "Amelia",
+          "nicknames": ["Amy"]
+        },
+        {
+          "name": "Harper",
+          "nicknames": []
+        },
+        {
+          "name": "Evelyn",
+          "nicknames": ["Eve"]
+        },
+        {
+          "name": "Abigail",
+          "nicknames": []
+        },
+        {
+          "name": "Emily",
+          "nicknames": ["Em"]
+        },
+        {
+          "name": "Elizabeth",
+          "nicknames": ["Beth"]
+        },
+        {
+          "name": "Sofia",
+          "nicknames": []
+        },
+        {
+          "name": "Scarlett",
+          "nicknames": []
+        },
+        {
+          "name": "Grace",
+          "nicknames": []
+        },
+        {
+          "name": "Lily",
+          "nicknames": []
+        },
+        {
+          "name": "Chloe",
+          "nicknames": []
+        },
+        {
+          "name": "Victoria",
+          "nicknames": ["Vic"]
+        },
+        {
+          "name": "Aria",
+          "nicknames": []
+        },
+        {
+          "name": "Zoe",
+          "nicknames": []
+        }
       ]
     }
   ],
