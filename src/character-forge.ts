@@ -13,9 +13,11 @@ import {
 import { Sex, SexesModule } from "./modules/sexes";
 import { SocialClass, SocialClassesModule } from "./modules/socialclasses";
 import { Surname, SurnamesModule } from "./modules/surnames";
+import { processFile } from "./utils/utils";
 
 export interface Character {
-  name: Name;
+  name: string;
+  nickname: string;
   surname: Surname;
   sex: Sex;
   age: Age;
@@ -25,7 +27,7 @@ export interface Character {
   bodyType: string;
   height: number;
   weight: number;
-  ethnicity: Ethnicity,
+  ethnicity: Ethnicity;
   occupation: Occupation;
   personalityTraits: PersonalityTrait[];
   socialClass: SocialClass;
@@ -62,7 +64,7 @@ export class CharacterForge {
 
   public forge(): Character {
     const sex = this.sexesModule.getRandomSex();
-    const name = this.namesModule.getRandomName(sex);
+    const { name, nickname } = this.namesModule.getRandomName(sex);
     const surname = this.surnamesModule.getRandomSurname();
     const age = this.agesModule.getRandomAge(18, 50);
     const hairColor = this.hairColorsModule.getRandomHairColor();
@@ -79,6 +81,7 @@ export class CharacterForge {
 
     const character: Character = {
       name,
+      nickname,
       surname,
       sex,
       age,
