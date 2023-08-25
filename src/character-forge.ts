@@ -12,6 +12,7 @@ import {
   PersonalityTraitModule,
 } from "./modules/personalitytraits";
 import { Sex, SexesModule } from "./modules/sexes";
+import { SexualitiesModule, Sexuality } from "./modules/sexualities";
 import { SocialClass, SocialClassesModule } from "./modules/socialclasses";
 import { Surname, SurnamesModule } from "./modules/surnames";
 import { processFile } from "./utils/utils";
@@ -29,6 +30,7 @@ export interface Character {
   height: number;
   weight: number;
   ethnicity: Ethnicity;
+  sexuality: Sexuality;
   occupation: Occupation;
   personalityTraits: PersonalityTrait[];
   socialClass: SocialClass;
@@ -48,6 +50,7 @@ export class CharacterForge {
   private socialClassesModule: SocialClassesModule;
   private bodyTypesModule: BodyTypesModule;
   private ethnicitiesModule: EthnicitiesModule;
+  private sexualitiesModule: SexualitiesModule;
   private hobbiesModule: HobbiesModule;
 
   constructor() {
@@ -63,6 +66,7 @@ export class CharacterForge {
     this.socialClassesModule = new SocialClassesModule();
     this.bodyTypesModule = new BodyTypesModule();
     this.ethnicitiesModule = new EthnicitiesModule();
+    this.sexualitiesModule = new SexualitiesModule();
     this.hobbiesModule = new HobbiesModule();
   }
 
@@ -82,6 +86,7 @@ export class CharacterForge {
     const height = bodyTypeData.height;
     const weight = bodyTypeData.weight;
     const ethnicity = this.ethnicitiesModule.getRandomEthnicity();
+    const sexuality = this.sexualitiesModule.getRandomSexuality();
     const hobbies = this.hobbiesModule.getRandomHobbies();
 
     const character: Character = {
@@ -97,6 +102,7 @@ export class CharacterForge {
       height,
       weight,
       ethnicity,
+      sexuality,
       occupation,
       personalityTraits,
       socialClass,
