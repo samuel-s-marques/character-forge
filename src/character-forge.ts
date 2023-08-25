@@ -1,3 +1,4 @@
+import { Age, AgesModule } from "./modules/age";
 import { BodyType, BodyTypesModule } from "./modules/bodytypes";
 import { EthnicitiesModule, Ethnicity } from "./modules/ethnicities";
 import { EyeColor, EyeColorsModule } from "./modules/eyecolors";
@@ -17,6 +18,7 @@ export interface Character {
   name: Name;
   surname: Surname;
   sex: Sex;
+  age: Age;
   hairColor: HairColor;
   eyeColor: EyeColor;
   hairStyle: HairStyle;
@@ -33,6 +35,7 @@ export class CharacterForge {
   private namesModule: NamesModule;
   private surnamesModule: SurnamesModule;
   private sexesModule: SexesModule;
+  private agesModule: AgesModule;
   private hairColorsModule: HairColorsModule;
   private eyeColorsModule: EyeColorsModule;
   private hairStylesModule: HairStylesModule;
@@ -46,6 +49,7 @@ export class CharacterForge {
     this.namesModule = new NamesModule();
     this.surnamesModule = new SurnamesModule();
     this.sexesModule = new SexesModule();
+    this.agesModule = new AgesModule();
     this.hairColorsModule = new HairColorsModule();
     this.eyeColorsModule = new EyeColorsModule();
     this.hairStylesModule = new HairStylesModule();
@@ -60,6 +64,7 @@ export class CharacterForge {
     const sex = this.sexesModule.getRandomSex();
     const name = this.namesModule.getRandomName(sex);
     const surname = this.surnamesModule.getRandomSurname();
+    const age = this.agesModule.getRandomAge(18, 50);
     const hairColor = this.hairColorsModule.getRandomHairColor();
     const eyeColor = this.eyeColorsModule.getRandomEyeColor();
     const hairStyle = this.hairStylesModule.getRandomHairStyle();
@@ -76,6 +81,7 @@ export class CharacterForge {
       name,
       surname,
       sex,
+      age,
       hairColor,
       eyeColor,
       hairStyle,
