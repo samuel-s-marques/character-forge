@@ -38,8 +38,8 @@ export class CharacterForge {
   private hairStylesModule: HairStylesModule;
   private occupationsModule: OccupationsModule;
   private personalityTraitsModule: PersonalityTraitModule;
-  private socialClassModule: SocialClassesModule;
-  private bodyTypeModule: BodyTypesModule;
+  private socialClassesModule: SocialClassesModule;
+  private bodyTypesModule: BodyTypesModule;
   private ethnicitiesModule: EthnicitiesModule;
 
   constructor() {
@@ -51,8 +51,8 @@ export class CharacterForge {
     this.hairStylesModule = new HairStylesModule();
     this.occupationsModule = new OccupationsModule();
     this.personalityTraitsModule = new PersonalityTraitModule();
-    this.socialClassModule = new SocialClassesModule();
-    this.bodyTypeModule = new BodyTypesModule();
+    this.socialClassesModule = new SocialClassesModule();
+    this.bodyTypesModule = new BodyTypesModule();
     this.ethnicitiesModule = new EthnicitiesModule();
   }
 
@@ -65,8 +65,8 @@ export class CharacterForge {
     const hairStyle = this.hairStylesModule.getRandomHairStyle();
     const occupation = this.occupationsModule.getRandomOccupation();
     const personalityTraits = this.personalityTraitsModule.pickRandomTrait(5);
-    const socialClass = this.socialClassModule.getRandomSocialClass();
-    const bodyTypeData = this.bodyTypeModule.getRandomBodyType(sex);
+    const socialClass = this.socialClassesModule.getRandomSocialClass();
+    const bodyTypeData = this.bodyTypesModule.getRandomBodyType(sex);
     const bodyType = bodyTypeData.type;
     const height = bodyTypeData.height;
     const weight = bodyTypeData.weight;
