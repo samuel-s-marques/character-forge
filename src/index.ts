@@ -11,6 +11,7 @@ import { SocialClassesModule } from "./modules/socialclasses";
 import { SurnamesModule } from "./modules/surnames";
 import { CharacterForge } from "./character-forge";
 import { BodyTypesModule } from "./modules/bodytypes";
+import { EthnicitiesModule } from "./modules/ethnicities";
 
 export {
   EyeColorsModule,
@@ -23,5 +24,6 @@ export {
   SocialClassesModule,
   SurnamesModule,
   BodyTypesModule,
+  EthnicitiesModule,
   CharacterForge,
 };
