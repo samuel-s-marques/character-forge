@@ -1,16 +1,16 @@
-import { EyeColorsModule } from "./modules/eyecolors";
-import { HairColorsModule } from "./modules/haircolors";
-import { HairStylesModule } from "./modules/hairstyles";
+import { EyeColorsModule } from "./modules/eye_colors";
+import { HairColorsModule } from "./modules/hair_colors";
+import { HairStylesModule } from "./modules/hair_styles";
 import { NamesModule } from "./modules/names";
 import { OccupationsModule } from "./modules/occupations";
 import {
-  PersonalityTraitModule,
-} from "./modules/personalitytraits";
+  PersonalityTraitsModule,
+} from "./modules/personality_traits";
 import { SexesModule } from "./modules/sexes";
-import { SocialClassesModule } from "./modules/socialclasses";
+import { SocialClassesModule } from "./modules/social_classes";
 import { SurnamesModule } from "./modules/surnames";
 import { CharacterForge } from "./character-forge";
-import { BodyTypesModule } from "./modules/bodytypes";
+import { BodyTypesModule } from "./modules/body_types";
 import { EthnicitiesModule } from "./modules/ethnicities";
 
 export {
@@ -19,7 +19,7 @@ export {
   HairStylesModule,
   NamesModule,
   OccupationsModule,
-  PersonalityTraitModule,
+  PersonalityTraitsModule,
   SexesModule,
   SocialClassesModule,
   SurnamesModule,
