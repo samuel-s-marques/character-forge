@@ -7,7 +7,11 @@ export class PhobiasModule {
     return processFile("phobias")["data"];
   }
 
-  public getRandomPhobia(): Phobia {
+  public getRandomPhobia(chance: number = 0.2): Phobia {
+    if (Math.random() > chance) {
+      return undefined as unknown as Phobia;
+    }
+
     const phobias = this.loadPhobiaData();
     const randomIndex = Math.floor(Math.random() * phobias.length);
 
