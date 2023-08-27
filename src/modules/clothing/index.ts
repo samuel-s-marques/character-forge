@@ -1,4 +1,4 @@
-import { processFile } from "../../utils/utils";
+import { generateRandomNumber, processFile } from "../../utils/utils";
 import { Sex } from "../sexes";
 
 export interface Clothing {
@@ -56,7 +56,7 @@ export class ClothingsModule {
       (entry: { [x: string]: any }) => entry[sex.toString()]
     )[sex.toString()]["accessories"];
     const selectedAccessories: string[] = [];
-    const numItemsToPick = Math.floor(Math.random() * (max - min + 1)) + min;
+    const numItemsToPick = generateRandomNumber(min, max)
 
     if (Math.random() < chance) {
       for (let index = 0; index <= numItemsToPick; index++) {
