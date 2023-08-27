@@ -34,10 +34,7 @@ export class CharacterForge {
     const occupation = this.occupationsModule.getRandomOccupation();
     const personalityTraits = this.personalityTraitsModule.pickRandomTrait(5);
     const socialClass = this.socialClassesModule.getRandomSocialClass();
-    const bodyTypeData = this.bodyTypesModule.getRandomBodyType(sex);
-    const bodyType = bodyTypeData.type;
-    const height = bodyTypeData.height;
-    const weight = bodyTypeData.weight;
+    const bodyType = this.bodyTypesModule.getRandomBodyType(sex);
     const ethnicity = this.ethnicitiesModule.getRandomEthnicity();
     const sexuality = this.sexualitiesModule.getRandomSexuality();
     const hobbies = this.hobbiesModule.getRandomHobbies(1, 3);
@@ -57,8 +54,6 @@ export class CharacterForge {
       eyeColor,
       hairStyle,
       bodyType,
-      height,
-      weight,
       clothings,
       ethnicity,
       sexuality,
