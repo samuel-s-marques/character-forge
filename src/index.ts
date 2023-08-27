@@ -17,6 +17,7 @@ import { SocialClassesModule } from "./modules/socialclasses";
 import { SurnamesModule } from "./modules/surnames";
 import { PhobiasModule } from "./modules/phobias";
 import { PoliticsModule } from "./modules/politics";
+import { ClothingsModule } from "./modules/clothing";
 
 export {
   AgesModule,
@@ -24,6 +25,7 @@ export {
   BodyTypesModule,
   CharacterForge,
   EthnicitiesModule,
+  ClothingsModule,
   PhobiasModule,
   EyeColorsModule,
   HairColorsModule,
