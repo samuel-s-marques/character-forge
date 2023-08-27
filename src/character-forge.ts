@@ -20,6 +20,7 @@ export class CharacterForge {
   private alignmentsModule = new mod.AlignmentsModule();
   private maritalStatusesModule = new mod.MaritalStatusesModule();
   private phobiasModule = new mod.PhobiasModule();
+  private politicsModule = new mod.PoliticsModule();
 
   public forge(): Character {
     const sex = this.sexesModule.getRandomSex();
@@ -38,10 +39,11 @@ export class CharacterForge {
     const weight = bodyTypeData.weight;
     const ethnicity = this.ethnicitiesModule.getRandomEthnicity();
     const sexuality = this.sexualitiesModule.getRandomSexuality();
-    const hobbies = this.hobbiesModule.getRandomHobbies();
+    const hobbies = this.hobbiesModule.getRandomHobbies(1, 3);
     const alignment = this.alignmentsModule.getRandomAlignment();
     const maritalStatus = this.maritalStatusesModule.getRandomMaritalStatus();
     const phobia = this.phobiasModule.getRandomPhobia();
+    const politicalView = this.politicsModule.getRandomPolitic();
 
     const character: Character = {
       name,
@@ -62,6 +64,7 @@ export class CharacterForge {
       phobia,
       personalityTraits,
       socialClass,
+      politicalView,
       hobbies,
       alignment,
     };
