@@ -10,7 +10,7 @@ export class PersonalityTraitModule {
     return processFile("personalitytraits")["data"];
   }
 
-  public pickRandomTrait(count: number): PersonalityTrait[] {
+  public pickRandomTrait(count: number = 3): PersonalityTrait[] {
     const personalityTraitData = this.loadPersonalityTraitData();
     const selectedTraits: PersonalityTrait[] = [];
 
