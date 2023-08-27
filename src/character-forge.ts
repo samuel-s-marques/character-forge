@@ -21,6 +21,7 @@ export class CharacterForge {
   private maritalStatusesModule = new mod.MaritalStatusesModule();
   private phobiasModule = new mod.PhobiasModule();
   private politicsModule = new mod.PoliticsModule();
+  private clothingsModule = new mod.ClothingsModule();
 
   public forge(): Character {
     const sex = this.sexesModule.getRandomSex();
@@ -44,6 +45,7 @@ export class CharacterForge {
     const maritalStatus = this.maritalStatusesModule.getRandomMaritalStatus();
     const phobia = this.phobiasModule.getRandomPhobia();
     const politicalView = this.politicsModule.getRandomPolitic();
+    const clothings = this.clothingsModule.getRandomClothing(sex);
 
     const character: Character = {
       name,
@@ -57,6 +59,7 @@ export class CharacterForge {
       bodyType,
       height,
       weight,
+      clothings,
       ethnicity,
       sexuality,
       maritalStatus,
