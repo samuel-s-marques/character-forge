@@ -1,4 +1,4 @@
-import { processFile } from "../../utils/utils";
+import { generateRandomNumber, processFile } from "../../utils/utils";
 
 export interface Hobbies {}
 
@@ -10,7 +10,7 @@ export class HobbiesModule {
   public getRandomHobbies(min: number = 1, max: number = 3): Hobbies {
     const hobbies = this.loadHobbiesData();
     const selectedHobbies: string[] = [];
-    const numItemsToPick = Math.floor(Math.random() * (max - min + 1)) + min;
+    const numItemsToPick = generateRandomNumber(min, max);
 
     for (let index = 0; index < numItemsToPick; index++) {
       const randomIndex = Math.floor(Math.random() * hobbies.length);
