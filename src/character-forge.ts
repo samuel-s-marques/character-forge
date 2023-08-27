@@ -19,6 +19,7 @@ export class CharacterForge {
   private hobbiesModule = new mod.HobbiesModule();
   private alignmentsModule = new mod.AlignmentsModule();
   private maritalStatusesModule = new mod.MaritalStatusesModule();
+  private phobiasModule = new mod.PhobiasModule();
 
   public forge(): Character {
     const sex = this.sexesModule.getRandomSex();
@@ -40,6 +41,7 @@ export class CharacterForge {
     const hobbies = this.hobbiesModule.getRandomHobbies();
     const alignment = this.alignmentsModule.getRandomAlignment();
     const maritalStatus = this.maritalStatusesModule.getRandomMaritalStatus();
+    const phobia = this.phobiasModule.getRandomPhobia();
 
     const character: Character = {
       name,
@@ -57,6 +59,7 @@ export class CharacterForge {
       sexuality,
       maritalStatus,
       occupation,
+      phobia,
       personalityTraits,
       socialClass,
       hobbies,
