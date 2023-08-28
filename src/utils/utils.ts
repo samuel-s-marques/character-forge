@@ -14,10 +14,28 @@ export function processFile(file: string): any {
 
 declare global {
   interface String {
-    capitalize(): string
+    capitalize(): string;
+  }
+
+  interface Array<T> {
+    formattedJoin(): string;
   }
 }
 
 String.prototype.capitalize = function () {
-  return this.charAt(0).toUpperCase() + this.slice(1)
-}
+  return this.charAt(0).toUpperCase() + this.slice(1);
+};
+
+// TODO: Implement multi locale
+Array.prototype.formattedJoin = function () {
+  if (this.length > 1) {
+    const lastItem = this.pop();
+    const joinedString = this.join(", ") + ", and " + lastItem;
+    
+    return joinedString
+  } else if (this.length === 1) {
+    return this[0];
+  }
+
+  return "";
+};
