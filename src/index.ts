@@ -21,7 +21,8 @@ import { SurnamesModule } from "./modules/surnames";
 import { PhobiasModule } from "./modules/phobias";
 import { PoliticsModule } from "./modules/politics";
 import { ClothingsModule, Clothing } from "./modules/clothing";
-import { PronounsModule } from "./modules/pronouns";
+import { PronounsModule, Pronoun } from "./modules/pronouns";
+import { SummariesModule } from "./modules/summaries";
 
 export {
   AgesModule,
@@ -30,6 +31,7 @@ export {
   BodyType,
   CharacterForge,
   EthnicitiesModule,
+  SummariesModule,
   ClothingsModule,
   Clothing,
   PhobiasModule,
@@ -48,4 +50,5 @@ export {
   SocialClassesModule,
   SurnamesModule,
   PronounsModule,
+  Pronoun,
 };
