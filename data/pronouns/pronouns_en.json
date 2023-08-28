@@ -1,10 +1,20 @@
 {
     "data": [
         {
-            "male": "he/him"
+            "male": {
+                "subjectPronoun": "he",
+                "objectPronoun": "him",
+                "possessiveAdjective": "his",
+                "possessivePronoun": "his"
+            }
         },
         {
-            "female": "she/her"
+            "female": {
+                "subjectPronoun": "she",
+                "objectPronoun": "her",
+                "possessiveAdjective": "her",
+                "possessivePronoun": "hers"
+            }
         }
     ]
 }
