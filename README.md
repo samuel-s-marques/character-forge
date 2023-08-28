@@ -1,4 +1,4 @@
-# character-forge
+# [character-forge](https://www.npmjs.com/package/character-forge)
 
 A powerful NPM package for generating procedural characters with randomized attributes like name, surname, sex, gender, personality traits and more.
 
