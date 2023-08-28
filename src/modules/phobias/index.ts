@@ -1,15 +1,13 @@
 import { processFile } from "../../utils/utils";
 
-export interface Phobia {}
-
 export class PhobiasModule {
   private loadPhobiaData(): any {
     return processFile("phobias")["data"];
   }
 
-  public getRandomPhobia(chance: number = 0.2): Phobia {
+  public getRandomPhobia(chance: number = 0.2): string | undefined {
     if (Math.random() > chance) {
-      return undefined as unknown as Phobia;
+      return undefined;
     }
 
     const phobias = this.loadPhobiaData();

@@ -1,13 +1,11 @@
 import { generateRandomNumber, processFile } from "../../utils/utils";
 
-export interface Hobbies {}
-
 export class HobbiesModule {
   private loadHobbiesData(): any {
     return processFile("hobbies")["data"];
   }
 
-  public getRandomHobbies(min: number = 1, max: number = 3): Hobbies {
+  public getRandomHobbies(min: number = 1, max: number = 3): string[] {
     const hobbies = this.loadHobbiesData();
     const selectedHobbies: string[] = [];
     const numItemsToPick = generateRandomNumber(min, max);

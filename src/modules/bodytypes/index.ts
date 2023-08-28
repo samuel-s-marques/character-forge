@@ -1,5 +1,4 @@
 import { processFile } from "../../utils/utils";
-import { Sex } from "../sexes";
 
 export interface BodyType {
   type: string;
@@ -12,15 +11,14 @@ export class BodyTypesModule {
     return processFile("bodytypes")["data"];
   }
 
-  public getRandomBodyType(sex: Sex): BodyType {
+  public getRandomBodyType(sex: string): BodyType {
     const bodyTypes = this.loadBodyTypeData();
-    const keys = Object.keys(bodyTypes[sex.toString()]);
+    const keys = Object.keys(bodyTypes[sex]);
 
     const randomIndex = Math.floor(Math.random() * keys.length);
     const type = keys[randomIndex];
 
-    const { heightRange, weightRange } =
-      bodyTypes[sex.toString()][keys[randomIndex]];
+    const { heightRange, weightRange } = bodyTypes[sex][keys[randomIndex]];
 
     const height =
       Math.random() * (heightRange[1] - heightRange[0]) + heightRange[0];
