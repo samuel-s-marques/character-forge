@@ -1,15 +1,15 @@
 {
   "compilerOptions": {
-    "target": "ES2015",
-    "module": "ES2020",
-    "moduleResolution": "NodeNext",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "outDir": "./dist",
     "resolveJsonModule": true,
+    "outDir": "dist",
+    "declarationMap": true,
     "strict": true,
-    "declaration": true
+    "esModuleInterop": true,
+    "moduleResolution": "Node",
+    "emitDeclarationOnly": false,
+    "declaration": true,
+    "allowJs": false
   },
   "include": ["src/**/*.ts", "data/**/*.json"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist"]
 }
