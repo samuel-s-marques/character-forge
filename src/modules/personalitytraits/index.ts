@@ -2,6 +2,7 @@ import { processFile } from "../../utils/utils";
 
 export interface PersonalityTrait {
   name: string;
+  type: string;
   contradictions: string[];
 }
 
@@ -22,7 +23,7 @@ export class PersonalityTraitModule {
 
       if (this.isTraitValid(newTrait, selectedTraits)) {
         if (!selectedTraits.includes(newTrait.name)) {
-          selectedTraits.push(newTrait.name);
+          selectedTraits.push(newTrait);
         }
       }
     }
