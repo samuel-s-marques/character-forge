@@ -1,6 +1,27 @@
 import * as mod from "./index";
 
-export interface Character {}
+export interface Character {
+  name: string;
+  nickname: string | undefined;
+  surname: string;
+  sex: string;
+  age: number;
+  hairColor: string;
+  eyeColor: string;
+  hairStyle: string;
+  bodyType: mod.BodyType;
+  clothings: mod.Clothing;
+  ethnicity: string;
+  sexuality: string;
+  maritalStatus: string;
+  occupation: string;
+  phobia: string | undefined;
+  personalityTraits: mod.PersonalityTrait[];
+  socialClass: string;
+  politicalView: string;
+  hobbies: string[];
+  alignment: string;
+}
 
 export class CharacterForge {
   private namesModule = new mod.NamesModule();
