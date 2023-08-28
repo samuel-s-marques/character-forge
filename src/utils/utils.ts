@@ -11,3 +11,13 @@ export function processFile(file: string): any {
 
   return JSON.parse(rawData);
 }
+
+declare global {
+  interface String {
+    capitalize(): string
+  }
+}
+
+String.prototype.capitalize = function () {
+  return this.charAt(0).toUpperCase() + this.slice(1)
+}
