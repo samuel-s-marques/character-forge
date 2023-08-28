@@ -5,6 +5,7 @@ export interface Character {
   nickname: string | undefined;
   surname: string;
   sex: string;
+  pronouns: string;
   age: number;
   hairColor: string;
   eyeColor: string;
@@ -27,6 +28,7 @@ export class CharacterForge {
   private namesModule = new mod.NamesModule();
   private surnamesModule = new mod.SurnamesModule();
   private sexesModule = new mod.SexesModule();
+  private pronounsModule = new mod.PronounsModule();
   private agesModule = new mod.AgesModule();
   private hairColorsModule = new mod.HairColorsModule();
   private eyeColorsModule = new mod.EyeColorsModule();
@@ -48,6 +50,7 @@ export class CharacterForge {
     const sex = this.sexesModule.getRandomSex();
     const { name, nickname } = this.namesModule.getRandomName(sex);
     const surname = this.surnamesModule.getRandomSurname();
+    const pronouns = this.pronounsModule.getPronoun(sex);
     const age = this.agesModule.getRandomAge(18, 50);
     const hairColor = this.hairColorsModule.getRandomHairColor();
     const eyeColor = this.eyeColorsModule.getRandomEyeColor();
@@ -70,6 +73,7 @@ export class CharacterForge {
       nickname,
       surname,
       sex,
+      pronouns,
       age,
       hairColor,
       eyeColor,
