@@ -5,7 +5,7 @@ export interface Character {
   nickname: string | undefined;
   surname: string;
   sex: string;
-  pronouns: string;
+  pronouns: mod.Pronoun;
   age: number;
   hairColor: string;
   eyeColor: string;
@@ -22,6 +22,7 @@ export interface Character {
   politicalView: string;
   hobbies: string[];
   alignment: string;
+  summary: string;
 }
 
 export class CharacterForge {
@@ -45,6 +46,7 @@ export class CharacterForge {
   private phobiasModule = new mod.PhobiasModule();
   private politicsModule = new mod.PoliticsModule();
   private clothingsModule = new mod.ClothingsModule();
+  private summariesModule = new mod.SummariesModule();
 
   public forge(): Character {
     const sex = this.sexesModule.getRandomSex();
@@ -68,7 +70,7 @@ export class CharacterForge {
     const politicalView = this.politicsModule.getRandomPolitic();
     const clothings = this.clothingsModule.getRandomClothing(sex);
 
-    const character: Character = {
+    let character: Character = {
       name,
       nickname,
       surname,
@@ -90,7 +92,11 @@ export class CharacterForge {
       politicalView,
       hobbies,
       alignment,
+      summary: ""
     };
+
+    const summary = this.summariesModule.getSummary(character);
+    character["summary"] = summary
 
     return character;
   }
