@@ -1,5 +1,4 @@
 import { Character } from "../../character-forge";
-import { processFile } from "../../utils/utils";
 import { PersonalityTrait } from "../personalitytraits";
 
 export class SummariesModule {
@@ -37,7 +36,7 @@ export class SummariesModule {
       `A ${age}-year-old ${occupation}, ${name} ${nickname} ${surname} thrives through ${hobbies}.`,
       `${name} ${nickname} ${surname}, ${age}, is a ${occupation} with a perchant for ${hobbies}.`,
       `${name} ${nickname} ${surname}, a ${age}-year-old ${occupation}, finds fulfillment in ${hobbies}.`,
-      `Meet ${name} ${nickname} ${surname}, a ${age}-year-old ${occupation} who finds solace in ${hobbies}.`
+      `Meet ${name} ${nickname} ${surname}, a ${age}-year-old ${occupation} who finds solace in ${hobbies}.`,
     ];
 
     const randomIndex = Math.floor(Math.random() * introductions.length);
@@ -49,9 +48,13 @@ export class SummariesModule {
 
       const positiveTraitIntroductions = [
         `${pronouns.subjectPronoun.capitalize()} radiates ${formattedPositiveTraits} traits.`,
-        `${pronouns.possessiveAdjective.capitalize()} ${formattedPositiveTraits} makes ${pronouns.objectPronoun} traits a social gem.`,
-        `${pronouns.possessiveAdjective.capitalize()} ${formattedPositiveTraits} makes ${pronouns.objectPronoun} traits a magnet for camaraderie.`,
-        `${pronouns.subjectPronoun.capitalize()} exudes ${formattedPositiveTraits} traits.`
+        `${pronouns.possessiveAdjective.capitalize()} ${formattedPositiveTraits} makes ${
+          pronouns.objectPronoun
+        } traits a social gem.`,
+        `${pronouns.possessiveAdjective.capitalize()} ${formattedPositiveTraits} makes ${
+          pronouns.objectPronoun
+        } traits a magnet for camaraderie.`,
+        `${pronouns.subjectPronoun.capitalize()} exudes ${formattedPositiveTraits} traits.`,
       ];
 
       const randomIndex = Math.floor(
@@ -69,7 +72,7 @@ export class SummariesModule {
         `But occasional bouts of ${formattedNegativeTraits} traits can emerge.`,
         `A touch of ${formattedNegativeTraits} traits surfaces now and then.`,
         `But occasionally peppered with hints of ${formattedNegativeTraits} traits`,
-        `Although occasional ${formattedNegativeTraits} traits tendencies arise.`
+        `Although occasional ${formattedNegativeTraits} traits tendencies arise.`,
       ];
 
       const randomIndex = Math.floor(
@@ -86,7 +89,34 @@ export class SummariesModule {
     ].join(" ");
   }
 
+  public getPhysicalDescription(character: Character): string {
+    const name: string = character.name;
+    const hairStyle: string = character.hairStyle;
+    const hairColor: string = character.hairColor;
+    const eyeColor: string = character.eyeColor;
+    const type: string = character.bodyType.type;
+    const height: string = character.bodyType.height.toFixed(2);
+    const weight: string = character.bodyType.weight.toFixed(2);
+    const pronouns = character.pronouns;
+
+    const physicalDescriptions = [
+      `Physically, ${name} is ${type} and stands at ${height} cm with ${weight} kg. ${pronouns.subjectPronoun.capitalize()} has ${hairColor} ${hairStyle} hair and ${eyeColor} eyes.`,
+      `In terms of appearance, ${name} boasts a ${type} frame with ${weight} kg, and stands at ${height} cm. ${pronouns.possessiveAdjective.capitalize()} ${hairColor} ${hairStyle} hair is usually neatly combed, complementing ${
+        pronouns.possessiveAdjective
+      } ${eyeColor} eyes.`,
+    ];
+
+    const randomIndex = Math.floor(Math.random() * physicalDescriptions.length);
+
+    let physicalDescription: string = physicalDescriptions[randomIndex];
+
+    return physicalDescription;
+  }
+
   public getSummary(character: Character): string {
-    return this.getIntroduction(character);
+    return [
+      this.getIntroduction(character),
+      this.getPhysicalDescription(character),
+    ].join("\n");
   }
 }
