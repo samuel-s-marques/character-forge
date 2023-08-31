@@ -29,12 +29,12 @@ export class SummariesModule {
     }
 
     if (character.nickname !== undefined) {
-      nickname = `"${character.nickname}"`;
+      nickname = ` "${character.nickname}" `;
     }
 
     const introductions: string[] = [
-      `A ${age}-year-old ${occupation}, ${name} ${nickname} ${surname} thrives through ${hobbies}.`,
-      `${name} ${nickname} ${surname}, ${age}, is a ${occupation} with a perchant for ${hobbies}.`,
+      `A ${age}-year-old ${occupation}, ${name}${nickname}${surname} thrives through ${hobbies}.`,
+      `${name} ${nickname} ${surname}, ${age}, is a ${occupation} with a penchant for ${hobbies}.`,
       `${name} ${nickname} ${surname}, a ${age}-year-old ${occupation}, finds fulfillment in ${hobbies}.`,
       `Meet ${name} ${nickname} ${surname}, a ${age}-year-old ${occupation} who finds solace in ${hobbies}.`,
     ];
@@ -48,12 +48,12 @@ export class SummariesModule {
 
       const positiveTraitIntroductions = [
         `${pronouns.subjectPronoun.capitalize()} radiates ${formattedPositiveTraits} traits.`,
-        `${pronouns.possessiveAdjective.capitalize()} ${formattedPositiveTraits} makes ${
+        `${pronouns.possessiveAdjective.capitalize()} ${formattedPositiveTraits} traits makes ${
           pronouns.objectPronoun
-        } traits a social gem.`,
-        `${pronouns.possessiveAdjective.capitalize()} ${formattedPositiveTraits} makes ${
+        } a social gem.`,
+        `${pronouns.possessiveAdjective.capitalize()} ${formattedPositiveTraits} traits makes ${
           pronouns.objectPronoun
-        } traits a magnet for camaraderie.`,
+        } a magnet for camaraderie.`,
         `${pronouns.subjectPronoun.capitalize()} exudes ${formattedPositiveTraits} traits.`,
       ];
 
@@ -100,8 +100,8 @@ export class SummariesModule {
     const pronouns = character.pronouns;
 
     const physicalDescriptions = [
-      `Physically, ${name} is ${type} and stands at ${height} cm with ${weight} kg. ${pronouns.subjectPronoun.capitalize()} has ${hairColor} ${hairStyle} hair and ${eyeColor} eyes.`,
-      `In terms of appearance, ${name} boasts a ${type} frame with ${weight} kg, and stands at ${height} cm. ${pronouns.possessiveAdjective.capitalize()} ${hairColor} ${hairStyle} hair is usually neatly combed, complementing ${
+      `Physically, ${name} is ${type} and stands at ${height}m with ${weight} kg. ${pronouns.subjectPronoun.capitalize()} has ${hairColor} ${hairStyle} hair and ${eyeColor} eyes.`,
+      `In terms of appearance, ${name} boasts a ${type} frame with ${weight} kg, and stands at ${height}m. ${pronouns.possessiveAdjective.capitalize()} ${hairColor} ${hairStyle} hair is usually neatly combed, complementing ${
         pronouns.possessiveAdjective
       } ${eyeColor} eyes.`,
     ];
@@ -113,10 +113,86 @@ export class SummariesModule {
     return physicalDescription;
   }
 
+  public getBackstory(character: Character): string {
+    let backstory: string = "";
+
+    const ethnicity = character.ethnicity;
+    const birthplace = character.birthplace;
+    const pronouns = character.pronouns;
+    const sexuality = character.sexuality;
+
+    const randomTraitIndex = Math.floor(
+      Math.random() * character.personalityTraits.length
+    );
+    const randomTrait: string =
+      character.personalityTraits[randomTraitIndex].name;
+
+    const backstories: string[] = [
+      `${pronouns.subjectPronoun.capitalize()} is ${ethnicity.capitalize()} and defines ${
+        pronouns.objectPronoun
+      }self as ${sexuality}.`,
+      `Born in ${birthplace}, ${character.name} embraces ${
+        pronouns.possessiveAdjective
+      } ${ethnicity.capitalize()} heritage.`,
+      `Originating from ${birthplace}, ${character.name} treasures ${
+        pronouns.possessiveAdjective
+      } ${ethnicity.capitalize()} heritage.`,
+      `Hailing from ${birthplace}, ${character.name} takes pride in ${
+        pronouns.possessiveAdjective
+      } ${ethnicity.capitalize()} heritage.`,
+    ];
+
+    const randomIndex = Math.floor(Math.random() * backstories.length);
+    backstory = backstories[randomIndex];
+
+    const occupations: string[] = [
+      `${pronouns.subjectPronoun.capitalize()} excels in ${
+        pronouns.possessiveAdjective
+      } field of work as ${character.occupation}, drawing from ${
+        pronouns.possessiveAdjective
+      } ${randomTrait} nature.`,
+      `${pronouns.possessiveAdjective.capitalize()} role as ${
+        character.occupation
+      } highlights ${
+        pronouns.possessiveAdjective
+      } ${randomTrait} approach to life.`,
+      `${pronouns.possessiveAdjective.capitalize()} journey as ${
+        character.occupation
+      } is colored by ${pronouns.possessiveAdjective} experiences.`,
+      `${pronouns.possessiveAdjective.capitalize()} role as ${character.occupation} sheds light on ${pronouns.possessiveAdjective} perspectives.`
+    ];
+
+    const randomOccupationIndex = Math.floor(
+      Math.random() * occupations.length
+    );
+    backstory += ` ${occupations[randomOccupationIndex]}`;
+
+    if (character.phobia !== undefined) {
+      const phobias = [
+        `${pronouns.subjectPronoun.capitalize()} harbors an irrational fear of ${
+          character.phobia
+        }.`,
+        `${pronouns.subjectPronoun.capitalize()} has a severe phobia of ${
+          character.phobia
+        }.`,
+        `However, ${pronouns.objectPronoun} deep-seated phobia of ${character.phobia} often surfaces in unexpected situations.`,
+        `Although, ${pronouns.objectPronoun} phobia of ${character.phobia} remains a hidden vulnerability.`,
+      ];
+
+      const randomIndex = Math.floor(Math.random() * phobias.length);
+      const phobia = phobias[randomIndex];
+
+      backstory += ` ${phobia}`;
+    }
+
+    return backstory;
+  }
+
   public getSummary(character: Character): string {
     return [
       this.getIntroduction(character),
+      this.getBackstory(character),
       this.getPhysicalDescription(character),
-    ].join("\n");
+    ].join("\n\n");
   }
 }
