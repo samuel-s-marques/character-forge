@@ -15,14 +15,14 @@ export class PersonalityTraitModule {
     const personalityTraitData = this.loadPersonalityTraitData();
     const selectedTraits: PersonalityTrait[] = [];
 
-    for (let index = 0; index < count; index++) {
+    while (selectedTraits.length != count) {
       const randomIndex = Math.floor(
         Math.random() * personalityTraitData.length
       );
       const newTrait = personalityTraitData[randomIndex];
 
       if (this.isTraitValid(newTrait, selectedTraits)) {
-        if (!selectedTraits.includes(newTrait.name)) {
+        if (!selectedTraits.includes(newTrait)) {
           selectedTraits.push(newTrait);
         }
       }
