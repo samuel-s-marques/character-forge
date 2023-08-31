@@ -4,11 +4,11 @@
       "male": [
         {
           "name": "Alexander",
-          "nicknames": ["Alex"]
+          "nicknames": ["Alex", "Lex"]
         },
         {
           "name": "Benjamin",
-          "nicknames": ["Ben", "Benny"]
+          "nicknames": ["Ben", "Benny", "Benji"]
         },
         {
           "name": "Christopher",
@@ -60,7 +60,7 @@
         },
         {
           "name": "Oliver",
-          "nicknames": ["Ollie", ""]
+          "nicknames": ["Ollie"]
         },
         {
           "name": "Patrick",
