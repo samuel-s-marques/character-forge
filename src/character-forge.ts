@@ -14,8 +14,7 @@ export interface Character {
   clothings: mod.Clothing;
   ethnicity: string;
   birthplace: string;
-  sexuality: string;
-  maritalStatus: string;
+  sexuality: mod.Sexuality;
   occupation: string;
   phobia: string | undefined;
   personalityTraits: mod.PersonalityTrait[];
@@ -43,7 +42,6 @@ export class CharacterForge {
   private sexualitiesModule = new mod.SexualitiesModule();
   private hobbiesModule = new mod.HobbiesModule();
   private alignmentsModule = new mod.AlignmentsModule();
-  private maritalStatusesModule = new mod.MaritalStatusesModule();
   private phobiasModule = new mod.PhobiasModule();
   private politicsModule = new mod.PoliticsModule();
   private clothingsModule = new mod.ClothingsModule();
@@ -64,10 +62,9 @@ export class CharacterForge {
     const bodyType = this.bodyTypesModule.getRandomBodyType(sex);
     const ethnicity = this.ethnicitiesModule.getRandomEthnicity();
     const birthplace = this.ethnicitiesModule.getRandomBirthplaceFromEthnicity(ethnicity);
-    const sexuality = this.sexualitiesModule.getRandomSexuality();
+    const sexuality = this.sexualitiesModule.getSexuality(age, sex);
     const hobbies = this.hobbiesModule.getRandomHobbies(1, 3);
     const alignment = this.alignmentsModule.getRandomAlignment();
-    const maritalStatus = this.maritalStatusesModule.getRandomMaritalStatus();
     const phobia = this.phobiasModule.getRandomPhobia();
     const politicalView = this.politicsModule.getRandomPolitic();
     const clothings = this.clothingsModule.getRandomClothing(sex);
@@ -87,7 +84,6 @@ export class CharacterForge {
       ethnicity,
       birthplace,
       sexuality,
-      maritalStatus,
       occupation,
       phobia,
       personalityTraits,
