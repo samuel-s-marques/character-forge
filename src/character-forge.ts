@@ -13,6 +13,7 @@ export interface Character {
   bodyType: mod.BodyType;
   clothings: mod.Clothing;
   ethnicity: string;
+  birthplace: string;
   sexuality: string;
   maritalStatus: string;
   occupation: string;
@@ -62,6 +63,7 @@ export class CharacterForge {
     const socialClass = this.socialClassesModule.getRandomSocialClass();
     const bodyType = this.bodyTypesModule.getRandomBodyType(sex);
     const ethnicity = this.ethnicitiesModule.getRandomEthnicity();
+    const birthplace = this.ethnicitiesModule.getRandomBirthplaceFromEthnicity(ethnicity);
     const sexuality = this.sexualitiesModule.getRandomSexuality();
     const hobbies = this.hobbiesModule.getRandomHobbies(1, 3);
     const alignment = this.alignmentsModule.getRandomAlignment();
@@ -83,6 +85,7 @@ export class CharacterForge {
       bodyType,
       clothings,
       ethnicity,
+      birthplace,
       sexuality,
       maritalStatus,
       occupation,
