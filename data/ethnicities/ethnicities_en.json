@@ -1,20 +1,219 @@
 {
   "data": [
-    "indian",
-    "pakistani",
-    "bangladeshi",
-    "chinese",
-    "japanese",
-    "korean",
-    "caribbean",
-    "african",
-    "african-american",
-    "black",
-    "white",
-    "english",
-    "irish",
-    "british",
-    "arab"
-  ],
-  "count": 14
+    {
+      "name": "south asian",
+      "birthplaces": [
+        "Sri Lanka",
+        "Bangladesh",
+        "India",
+        "Afghanistan",
+        "Pakistan",
+        "Bhutan",
+        "Nepal",
+        "The Maldives",
+        "Iran"
+      ]
+    },
+    {
+      "name": "southeast asian",
+      "birthplaces": [
+        "Georgia",
+        "Armenia",
+        "Azerbaijan",
+        "Turkey",
+        "Cyprus",
+        "Syria",
+        "Lebanon",
+        "Israel",
+        "Palestine",
+        "Jordan",
+        "Iraq",
+        "Oman",
+        "Yemen",
+        "Kuwait",
+        "Bahrain",
+        "Qatar",
+        "Saudi Arabia"
+      ]
+    },
+    {
+      "name": "central asian",
+      "birthplaces": [
+        "Tajikistan",
+        "Uzbekistan",
+        "Kazakhstan",
+        "Turkmenistan",
+        "Kyrgyzstan"
+      ]
+    },
+    {
+      "name": "east asian",
+      "birthplaces": [
+        "China",
+        "Mongolia",
+        "North Korea",
+        "South Korea",
+        "Japan",
+        "Hong Kong",
+        "Taiwan",
+        "Macau"
+      ]
+    },
+    {
+      "name": "western asian",
+      "birthplaces": [
+        "Brunei",
+        "Cambodia",
+        "Indonesia",
+        "Laos",
+        "Malaysia",
+        "Myanmar",
+        "Philippines",
+        "Singapore",
+        "Thailand",
+        "Timor Leste",
+        "Vietnam"
+      ]
+    },
+    {
+      "name": "northern african",
+      "birthplaces": [
+        "Algeria",
+        "Libya",
+        "Egypt",
+        "Sudan",
+        "Morocco",
+        "Tunisia"
+      ]
+    },
+    {
+      "name": "southern african",
+      "birthplaces": ["Namibia", "Botswana", "South Africa"]
+    },
+    {
+      "name": "central african",
+      "birthplaces": [
+        "Chad",
+        "Cameroon",
+        "Central African Republic",
+        "Gabon",
+        "Democratic Republic of Congo",
+        "Angola"
+      ]
+    },
+    {
+      "name": "eastern african",
+      "birthplaces": [
+        "Ethiopia",
+        "Somalia",
+        "Kenya",
+        "Tanzania",
+        "Madagascar",
+        "Mozambique",
+        "Uganda",
+        "South Sudan",
+        "Zambia",
+        "Zimbabwe"
+      ]
+    },
+    {
+      "name": "western african",
+      "birthplaces": [
+        "Niger",
+        "Mauritania",
+        "Senegal",
+        "Guinea",
+        "Nigeria",
+        "Mali",
+        "Ghana",
+        "Liberia",
+        "Serra Leone",
+        "Guinea-Bissau",
+        "The Gambia",
+        "Benin",
+        "Togo",
+        "Burkina Faso"
+      ]
+    },
+    {
+      "name": "southern european",
+      "birthplaces": ["Portugal", "Spain", "Italy", "Malta", "Greece"]
+    },
+    {
+      "name": "western european",
+      "birthplaces": [
+        "France",
+        "Switzerland",
+        "Austria",
+        "Germany",
+        "Netherlands",
+        "Belgium",
+        "Luxembourg"
+      ]
+    },
+    {
+      "name": "northern european",
+      "birthplaces": ["Finland", "Sweden", "Norway", "Denmark", "Iceland"]
+    },
+    {
+      "name": "eastern european",
+      "birthplaces": [
+        "Romania",
+        "Bulgaria",
+        "Serbia",
+        "Bosnia",
+        "Albania",
+        "Ukraine",
+        "Belarus",
+        "Lativia",
+        "Estonia",
+        "Lithuania",
+        "Poland",
+        "Czech Republic",
+        "Slovakia",
+        "Hungary",
+        "Slovenia",
+        "Croatia",
+        "Macedonia",
+        "Russia"
+      ]
+    },
+    {
+      "name": "british",
+      "birthplaces": ["Ireland", "Great Britain (UK)"]
+    },
+    {
+      "name": "latin american",
+      "birthplaces": [
+        "Brazil",
+        "Argentina",
+        "Colombia",
+        "Peru",
+        "Chile",
+        "Equator",
+        "Venezuela",
+        "Bolivia",
+        "Guyana",
+        "Uruguay",
+        "Paraguay",
+        "Suriname"
+      ]
+    },
+    {
+      "name": "central american",
+      "birthplaces": [
+        "Guatemala",
+        "Nicaragua",
+        "Costa Rica",
+        "El Salvador",
+        "Belize",
+        "Honduras",
+        "Panama"
+      ]
+    },
+    {
+      "name": "north american",
+      "birthplaces": ["United States", "Canada", "Mexico", "Cuba"]
+    }
+  ]
 }
