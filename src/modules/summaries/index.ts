@@ -6,7 +6,7 @@ export class SummariesModule {
     let introduction: string = "";
 
     const name: string = character.name;
-    let nickname: string = "";
+    let nickname: string = " ";
     const surname: string = character.surname;
     const age: number = character.age;
     const hobbies: string = character.hobbies.formattedJoin();
@@ -34,9 +34,9 @@ export class SummariesModule {
 
     const introductions: string[] = [
       `A ${age}-year-old ${occupation}, ${name}${nickname}${surname} thrives through ${hobbies}.`,
-      `${name} ${nickname} ${surname}, ${age}, is a ${occupation} with a penchant for ${hobbies}.`,
-      `${name} ${nickname} ${surname}, a ${age}-year-old ${occupation}, finds fulfillment in ${hobbies}.`,
-      `Meet ${name} ${nickname} ${surname}, a ${age}-year-old ${occupation} who finds solace in ${hobbies}.`,
+      `${name}${nickname}${surname}, ${age}, is a ${occupation} with a penchant for ${hobbies}.`,
+      `${name}${nickname}${surname}, a ${age}-year-old ${occupation}, finds fulfillment in ${hobbies}.`,
+      `Meet ${name}${nickname}${surname}, a ${age}-year-old ${occupation} who finds solace in ${hobbies}.`,
     ];
 
     const randomIndex = Math.floor(Math.random() * introductions.length);
