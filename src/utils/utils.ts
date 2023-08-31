@@ -29,10 +29,7 @@ String.prototype.capitalize = function () {
 // TODO: Implement multi locale
 Array.prototype.formattedJoin = function () {
   if (this.length > 1) {
-    const lastItem = this.pop();
-    const joinedString = this.join(", ") + ", and " + lastItem;
-    
-    return joinedString
+    return this.join(', ').replace(/, ([^,]*)$/, ', and $1')
   } else if (this.length === 1) {
     return this[0];
   }
