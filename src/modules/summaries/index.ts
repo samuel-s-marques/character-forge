@@ -119,7 +119,7 @@ export class SummariesModule {
     const ethnicity = character.ethnicity;
     const birthplace = character.birthplace;
     const pronouns = character.pronouns;
-    const sexuality = character.sexuality;
+    const sexuality = character.sexuality.sexuality;
 
     const randomTraitIndex = Math.floor(
       Math.random() * character.personalityTraits.length
@@ -159,7 +159,9 @@ export class SummariesModule {
       `${pronouns.possessiveAdjective.capitalize()} journey as ${
         character.occupation
       } is colored by ${pronouns.possessiveAdjective} experiences.`,
-      `${pronouns.possessiveAdjective.capitalize()} role as ${character.occupation} sheds light on ${pronouns.possessiveAdjective} perspectives.`
+      `${pronouns.possessiveAdjective.capitalize()} role as ${
+        character.occupation
+      } sheds light on ${pronouns.possessiveAdjective} perspectives.`,
     ];
 
     const randomOccupationIndex = Math.floor(
