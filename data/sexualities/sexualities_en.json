@@ -1,10 +1,15 @@
 {
-    "data": [
-        "straight",
-        "bissexual",
-        "gay",
-        "asexual",
-        "pansexual"
+  "data": {
+    "sexualities": ["straight", "bissexual", "gay", "asexual", "pansexual"],
+    "relationshipStatus": [
+      "single",
+      "dating",
+      "married",
+      "divorced",
+      "widowed"
     ],
-    "count": 4
+    "nature": ["serious", "casual"],
+    "duration": ["short-term", "long-term"]
+  },
+  "count": 4
 }
