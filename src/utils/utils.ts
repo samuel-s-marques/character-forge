@@ -29,10 +29,26 @@ String.prototype.capitalize = function () {
 // TODO: Implement multi locale
 Array.prototype.formattedJoin = function () {
   if (this.length > 1) {
-    return this.join(', ').replace(/, ([^,]*)$/, ', and $1')
+    return this.join(", ").replace(/, ([^,]*)$/, ", and $1");
   } else if (this.length === 1) {
     return this[0];
   }
 
   return "";
 };
+
+export function weightedRandom(items: any[], weights: number[]): any {
+  const totalWeight = weights.reduce((sum, weight) => sum + weight, 0);
+  const randomValue = Math.random() * totalWeight;
+  let cumulativeWeight = 0;
+
+  for (let index = 0; index < items.length; index++) {
+    cumulativeWeight += weights[index];
+
+    if (randomValue <= cumulativeWeight) {
+      return items[index];
+    }
+  }
+
+  return items[items.length - 1];
+}
