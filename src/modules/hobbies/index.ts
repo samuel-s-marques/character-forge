@@ -10,7 +10,7 @@ export class HobbiesModule {
     const selectedHobbies: string[] = [];
     const numItemsToPick = generateRandomNumber(min, max);
 
-    for (let index = 0; index < numItemsToPick; index++) {
+    while (selectedHobbies.length != numItemsToPick) {
       const randomIndex = Math.floor(Math.random() * hobbies.length);
 
       if (!selectedHobbies.includes(hobbies[randomIndex])) {
