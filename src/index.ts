@@ -7,7 +7,6 @@ import { EyeColorsModule } from "./modules/eyecolors";
 import { HairColorsModule } from "./modules/haircolors";
 import { HairStylesModule } from "./modules/hairstyles";
 import { HobbiesModule } from "./modules/hobbies";
-import { MaritalStatusesModule } from "./modules/maritalstatus";
 import { NamesModule } from "./modules/names";
 import { OccupationsModule } from "./modules/occupations";
 import {
@@ -15,7 +14,7 @@ import {
   PersonalityTrait,
 } from "./modules/personalitytraits";
 import { SexesModule } from "./modules/sexes";
-import { SexualitiesModule } from "./modules/sexualities";
+import { SexualitiesModule, Sexuality } from "./modules/sexualities";
 import { SocialClassesModule } from "./modules/socialclasses";
 import { SurnamesModule } from "./modules/surnames";
 import { PhobiasModule } from "./modules/phobias";
@@ -40,13 +39,13 @@ export {
   PoliticsModule,
   HairStylesModule,
   HobbiesModule,
-  MaritalStatusesModule,
   NamesModule,
   OccupationsModule,
   PersonalityTraitModule,
   PersonalityTrait,
   SexesModule,
   SexualitiesModule,
+  Sexuality,
   SocialClassesModule,
   SurnamesModule,
   PronounsModule,
