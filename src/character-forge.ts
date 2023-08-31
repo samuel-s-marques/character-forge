@@ -61,7 +61,8 @@ export class CharacterForge {
     const socialClass = this.socialClassesModule.getRandomSocialClass();
     const bodyType = this.bodyTypesModule.getRandomBodyType(sex);
     const ethnicity = this.ethnicitiesModule.getRandomEthnicity();
-    const birthplace = this.ethnicitiesModule.getRandomBirthplaceFromEthnicity(ethnicity);
+    const birthplace =
+      this.ethnicitiesModule.getRandomBirthplaceFromEthnicity(ethnicity);
     const sexuality = this.sexualitiesModule.getSexuality(age, sex);
     const hobbies = this.hobbiesModule.getRandomHobbies(1, 3);
     const alignment = this.alignmentsModule.getRandomAlignment();
@@ -91,11 +92,11 @@ export class CharacterForge {
       politicalView,
       hobbies,
       alignment,
-      summary: ""
+      summary: "",
     };
 
     const summary = this.summariesModule.getSummary(character);
-    character["summary"] = summary
+    character["summary"] = summary;
 
     return character;
   }
