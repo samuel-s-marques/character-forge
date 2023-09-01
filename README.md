@@ -48,69 +48,106 @@ npm install character-forge
 
    ```javascript
    {
-      name: 'Victoria',
-      nickname: 'Vic',
-      surname: 'Anderson',
-      sex: 'female',
+      name: 'William',
+      nickname: 'Will',
+      surname: 'Gonzalez',
+      sex: 'male',
       pronouns: {
-         subjectPronoun: 'she',
-         objectPronoun: 'her',
-         possessiveAdjective: 'her',
-         possessivePronoun: 'hers'
+         subjectPronoun: 'he',
+         objectPronoun: 'him',
+         possessiveAdjective: 'his',
+         possessivePronoun: 'his'
       },
       age: 44,
-      hairColor: 'jet black',
-      eyeColor: 'gray',
-      hairStyle: 'braids',
+      hairColor: 'silver',
+      eyeColor: 'amber',
+      hairStyle: 'dreadlocks',
       bodyType: {
-         type: 'muscular',
-         height: 1.8730917971944987,
-         weight: 71.9487367973549
+         type: 'slim',
+         height: 1.972212617751488,
+         weight: 62.18057860459511
       },
       clothings: {
-         headwear: 'hair clip',
+         headwear: undefined,
          outerwear: undefined,
-         upperbody: 'blouse',
-         lowerbody: 'bermuda shorts',
-         footwear: 'heels',
+         upperbody: 'tank top',
+         lowerbody: 'joggers',
+         footwear: 'chelsea boots',
          accessories: []
       },
-      ethnicity: 'latin american',
-      birthplace: 'Brazil',
+      ethnicity: 'south asian',
+      birthplace: 'Sri Lanka',
       sexuality: {
-         sexuality: 'asexual',
-         relationshipStatus: 'married',
-         pastPartners: 8,
-         seriousRelationship: 1,
+         sexuality: 'bissexual',
+         relationshipStatus: 'single',
+         pastPartners: 5,
+         seriousRelationship: 2,
          relationshipHistory: [
-            [Object], [Object],
-            [Object], [Object],
-            [Object], [Object],
-            [Object], [Object]
+            {
+            partner: { name: 'Zachary', surname: 'Garcia', age: 50 },
+            nature: 'serious',
+            duration: 'short-term'
+            },
+            {
+            partner: { name: 'Isabella', surname: 'Davis', age: 39 },
+            nature: 'serious',
+            duration: 'long-term'
+            },
+            {
+            partner: { name: 'Kevin', surname: 'Williams', age: 21 },
+            nature: 'serious',
+            duration: 'short-term'
+            },
+            {
+            partner: { name: 'Felix', surname: 'Jackson', age: 47 },
+            nature: 'serious',
+            duration: 'long-term'
+            },
+            {
+            partner: { name: 'Abigail', surname: 'Johnson', age: 20 },
+            nature: 'casual',
+            duration: 'short-term'
+            }
          ]
       },
-      occupation: 'cop',
+      occupation: 'doctor',
       phobia: undefined,
       personalityTraits: [
-         { name: 'impatient', type: 'negative', contradictions: [Array] },
          {
-            name: 'perfectionistic',
+            name: 'arrogant',
             type: 'negative',
-            contradictions: [Array]
+            contradictions: [ 'humble' ]
          },
-         { name: 'spontaneous', type: 'negative', contradictions: [Array] },
-         { name: 'humble', type: 'positive', contradictions: [Array] },
-         { name: 'curious', type: 'positive', contradictions: [Array] }
+         {
+            name: 'apathetic',
+            type: 'negative',
+            contradictions: [ 'empathetic' ]
+         },
+         {
+            name: 'accepting',
+            type: 'positive',
+            contradictions: [ 'accepting' ]
+         },
+         {
+            name: 'lethargic',
+            type: 'negative',
+            contradictions: [ 'energetic' ]
+         },
+         {
+            name: 'trusting',
+            type: 'positive',
+            contradictions: [ 'cynical' ]
+         }
       ],
-      socialClass: 'underclass',
-      politicalView: 'far left',
-      hobbies: [ 'painting', 'backpacking' ],
-      alignment: 'chaotic neutral',
-      summary: 'Victoria "Vic" Anderson, 44, is a cop with a penchant for painting, and backpacking. Her humble, and curious traits makes her a magnet for camaraderie. Although traces of impatient, perfectionistic, and spontaneous traits occasionally surface.\n' +
+      socialClass: 'working class',
+      politicalView: 'left',
+      hobbies: [ 'cycling', 'snorkeling', 'photography' ],
+      alignment: 'lawful evil',
+      summary: 'William "Will" Gonzalez, a 44-year-old doctor, finds fulfillment in cycling, snorkeling, and photography. He exudes accepting, and trusting traits. Although occasional arrogant, apathetic, and lethargic traits tendencies arise.\n' +
          '\n' +
-         'Hailing from Brazil, Victoria takes pride in her Latin american heritage. She excels in her field of work as cop, drawing from her impatient nature.\n' +
+         'Hailing from Sri Lanka, William takes pride in his South asian heritage. His journey as doctor is colored by his experiences.\n' +
          '\n' +
-         'Physically, Victoria is muscular and stands at 1.87m with 71.95 kg. She has jet black braids hair and gray eyes.'
+         'In terms of appearance, William boasts a slim frame with 62.18 kg, and stands at 1.97m. His silver dreadlocks hair is usually neatly combed, complementing his amber eyes.'
    }
    ```
 
