@@ -110,8 +110,10 @@ export class SexualitiesModule {
         break;
       case "bissexual":
         characterSex = sexesModule.getRandomSex()
+        break;
       case "gay":
         characterSex = sex
+        break;
       default:
         characterSex = sexesModule.getRandomSex()
         break;
