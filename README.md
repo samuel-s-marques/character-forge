@@ -48,37 +48,69 @@ npm install character-forge
 
    ```javascript
    {
-      name: 'Daniel',
-      nickname: 'Dan',
-      surname: 'Wilson',
-      sex: 'male',
-      age: 48,
-      hairColor: 'brunette',
-      eyeColor: 'violet',
-      hairStyle: 'curly',
+      name: 'Victoria',
+      nickname: 'Vic',
+      surname: 'Anderson',
+      sex: 'female',
+      pronouns: {
+         subjectPronoun: 'she',
+         objectPronoun: 'her',
+         possessiveAdjective: 'her',
+         possessivePronoun: 'hers'
+      },
+      age: 44,
+      hairColor: 'jet black',
+      eyeColor: 'gray',
+      hairStyle: 'braids',
       bodyType: {
-         type: 'chubby',
-         height: 1.7325255971397844,
-         weight: 119.84829717036985
+         type: 'muscular',
+         height: 1.8730917971944987,
+         weight: 71.9487367973549
       },
       clothings: {
-         headwear: 'bowler hat',
-         outerwear: 'ski jacket',
-         upperbody: 'cardigan',
-         lowerbody: 'work pants',
-         footwear: 'boat shoes',
+         headwear: 'hair clip',
+         outerwear: undefined,
+         upperbody: 'blouse',
+         lowerbody: 'bermuda shorts',
+         footwear: 'heels',
          accessories: []
       },
-      ethnicity: 'arab',
-      sexuality: 'gay',
-      maritalStatus: 'widowed',
-      occupation: 'runner',
+      ethnicity: 'latin american',
+      birthplace: 'Brazil',
+      sexuality: {
+         sexuality: 'asexual',
+         relationshipStatus: 'married',
+         pastPartners: 8,
+         seriousRelationship: 1,
+         relationshipHistory: [
+            [Object], [Object],
+            [Object], [Object],
+            [Object], [Object],
+            [Object], [Object]
+         ]
+      },
+      occupation: 'cop',
       phobia: undefined,
-      personalityTraits: [ 'passive', 'disorganized', 'pratical', 'ambitious', 'stubborn' ],
+      personalityTraits: [
+         { name: 'impatient', type: 'negative', contradictions: [Array] },
+         {
+            name: 'perfectionistic',
+            type: 'negative',
+            contradictions: [Array]
+         },
+         { name: 'spontaneous', type: 'negative', contradictions: [Array] },
+         { name: 'humble', type: 'positive', contradictions: [Array] },
+         { name: 'curious', type: 'positive', contradictions: [Array] }
+      ],
       socialClass: 'underclass',
-      politicalView: 'center-right',
-      hobbies: [ 'mountain biking', 'reading' ],
-      alignment: 'neutral evil'
+      politicalView: 'far left',
+      hobbies: [ 'painting', 'backpacking' ],
+      alignment: 'chaotic neutral',
+      summary: 'Victoria "Vic" Anderson, 44, is a cop with a penchant for painting, and backpacking. Her humble, and curious traits makes her a magnet for camaraderie. Although traces of impatient, perfectionistic, and spontaneous traits occasionally surface.\n' +
+         '\n' +
+         'Hailing from Brazil, Victoria takes pride in her Latin american heritage. She excels in her field of work as cop, drawing from her impatient nature.\n' +
+         '\n' +
+         'Physically, Victoria is muscular and stands at 1.87m with 71.95 kg. She has jet black braids hair and gray eyes.'
    }
    ```
 
