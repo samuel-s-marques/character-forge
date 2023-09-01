@@ -9,7 +9,7 @@ CharacterForge offers an extensive list of attributes that can be customized to 
 - Names: Generates first names, nicknames, and surnames
 - Physical Appearance: Generates sex, age, hair color, eye color, hair style, body type, height, and weight to create a vivid visual representation.
 - Clothing: Generates the character's clothing style and attire.
-- Background: Generates ethnicity, sexuality, marital status, and occupation for a comprehensive background story.
+- Background: Generates ethnicity, sexuality and marital status, birth place, and occupation for a comprehensive background story.
 - Psychological Traits: Generates phobias, personality traits, alignment, and hobbies to give your character depth and complexity.
 - Social Aspects: Generates the character's social class and political views to explore their position and beliefs in your world.
 
