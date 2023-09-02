@@ -1,3 +1,4 @@
+import { Mulberry32 } from "../../utils/mulberry32";
 import { generateRandomNumber, processFile } from "../../utils/utils";
 
 export interface Clothing {
@@ -10,25 +11,33 @@ export interface Clothing {
 }
 
 export class ClothingsModule {
+  private seed: number | undefined;
+
+  constructor(seed?: number) {
+    this.seed = seed;
+  }
+
   private loadClothingData(): any {
     return processFile("clothings")["data"];
   }
 
   public getRandomUpperbody(sex: string): string {
+    const rng = new Mulberry32(this.seed);
     const upperbodies = this.loadClothingData().find(
       (entry: { [x: string]: any }) => entry[sex]
     )[sex]["upperbody"];
 
-    const randomIndex = Math.floor(Math.random() * upperbodies.length);
+    const randomIndex = Math.floor(rng.random() * upperbodies.length);
     return upperbodies[randomIndex];
   }
 
   public getRandomLowerbody(sex: string): string {
+    const rng = new Mulberry32(this.seed);
     const lowerbodies = this.loadClothingData().find(
       (entry: { [x: string]: any }) => entry[sex]
     )[sex]["lowerbody"];
 
-    const randomIndex = Math.floor(Math.random() * lowerbodies.length);
+    const randomIndex = Math.floor(rng.random() * lowerbodies.length);
     return lowerbodies[randomIndex];
   }
 
@@ -36,7 +45,9 @@ export class ClothingsModule {
     sex: string,
     chance: number = 0.3
   ): string | undefined {
-    if (Math.random() > chance) {
+    const rng = new Mulberry32(this.seed);
+
+    if (rng.random() > chance) {
       return undefined;
     }
 
@@ -44,7 +55,7 @@ export class ClothingsModule {
       (entry: { [x: string]: any }) => entry[sex]
     )[sex]["headwear"];
 
-    const randomIndex = Math.floor(Math.random() * headwear.length);
+    const randomIndex = Math.floor(rng.random() * headwear.length);
     return headwear[randomIndex];
   }
 
@@ -54,15 +65,16 @@ export class ClothingsModule {
     max: number = 3,
     chance = 0.2
   ): string[] {
+    const rng = new Mulberry32(this.seed);
     const accessories = this.loadClothingData().find(
       (entry: { [x: string]: any }) => entry[sex]
     )[sex]["accessories"];
     const selectedAccessories: string[] = [];
-    const numItemsToPick = generateRandomNumber(min, max);
+    const numItemsToPick = generateRandomNumber(min, max, this.seed);
 
-    if (Math.random() < chance) {
+    if (rng.random() < chance) {
       for (let index = 0; index <= numItemsToPick; index++) {
-        const randomIndex = Math.floor(Math.random() * accessories.length);
+        const randomIndex = Math.floor(rng.random() * accessories.length);
 
         if (!selectedAccessories.includes(accessories[randomIndex])) {
           selectedAccessories.push(accessories[randomIndex]);
@@ -74,16 +86,19 @@ export class ClothingsModule {
   }
 
   public getRandomFootwear(sex: string): string {
+    const rng = new Mulberry32(this.seed);
     const footwear = this.loadClothingData().find(
       (entry: { [x: string]: any }) => entry[sex]
     )[sex]["footwear"];
 
-    const randomIndex = Math.floor(Math.random() * footwear.length);
+    const randomIndex = Math.floor(rng.random() * footwear.length);
     return footwear[randomIndex];
   }
 
   public getRandomOuterwear(sex: string, chance: number): string | undefined {
-    if (Math.random() > chance) {
+    const rng = new Mulberry32(this.seed);
+
+    if (rng.random() > chance) {
       return undefined;
     }
 
@@ -91,7 +106,7 @@ export class ClothingsModule {
       (entry: { [x: string]: any }) => entry[sex]
     )[sex]["outerwear"];
 
-    const randomIndex = Math.floor(Math.random() * outerwear.length);
+    const randomIndex = Math.floor(rng.random() * outerwear.length);
     return outerwear[randomIndex];
   }
 

@@ -1,3 +1,4 @@
+import { Mulberry32 } from "../../utils/mulberry32";
 import { processFile } from "../../utils/utils";
 
 export interface PersonalityTrait {
@@ -7,17 +8,24 @@ export interface PersonalityTrait {
 }
 
 export class PersonalityTraitModule {
+  private seed: number | undefined;
+
+  constructor(seed?: number) {
+    this.seed = seed;
+  }
+
   private loadPersonalityTraitData(): any {
     return processFile("personalitytraits")["data"];
   }
 
   public pickRandomTrait(count: number = 3): PersonalityTrait[] {
+    const rng = new Mulberry32(this.seed);
     const personalityTraitData = this.loadPersonalityTraitData();
     const selectedTraits: PersonalityTrait[] = [];
 
     while (selectedTraits.length != count) {
       const randomIndex = Math.floor(
-        Math.random() * personalityTraitData.length
+        rng.random() * personalityTraitData.length
       );
       const newTrait = personalityTraitData[randomIndex];
 

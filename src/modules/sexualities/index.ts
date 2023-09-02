@@ -1,3 +1,4 @@
+import { Mulberry32 } from "../../utils/mulberry32";
 import {
   generateRandomNumber,
   processFile,
@@ -29,6 +30,12 @@ export interface Relationship {
 }
 
 export class SexualitiesModule {
+  private seed: number | undefined;
+
+  constructor(seed?: number) {
+    this.seed = seed;
+  }
+
   private loadSexualityData(): any {
     return processFile("sexualities")["data"];
   }
@@ -50,8 +57,9 @@ export class SexualitiesModule {
   }
 
   public getRandomSexuality(): string {
+    const rng = new Mulberry32(this.seed);
     const sexualities = this.loadSexualityData()["sexualities"];
-    const randomIndex = Math.floor(Math.random() * sexualities.length);
+    const randomIndex = Math.floor(rng.random() * sexualities.length);
 
     return sexualities[randomIndex];
   }
@@ -59,19 +67,19 @@ export class SexualitiesModule {
   public getRandomRelationshipStatus(): string {
     const relationshipStatus = this.loadSexualityData()["relationshipStatus"];
 
-    return weightedRandom(relationshipStatus, [30, 20, 10, 5, 2]);
+    return weightedRandom(relationshipStatus, [30, 20, 10, 5, 2], this.seed);
   }
 
   public getPastPartners(age: number): number {
     const maxPartners = Math.floor(age / 5);
 
-    return Math.min(generateRandomNumber(0, maxPartners + 1), maxPartners);
+    return Math.min(generateRandomNumber(0, maxPartners + 1, this.seed), maxPartners);
   }
 
   public generateSeriousRelationships(age: number): number {
     const maxRelationships = Math.floor(age / 8);
     return Math.min(
-      generateRandomNumber(0, maxRelationships + 1),
+      generateRandomNumber(0, maxRelationships + 1, this.seed),
       maxRelationships
     );
   }

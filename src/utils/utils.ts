@@ -1,8 +1,14 @@
 import path = require("path");
 import fs = require("fs");
+import { Mulberry32 } from "./mulberry32";
 
-export function generateRandomNumber(min: number, max: number): number {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+export function generateRandomNumber(
+  min: number,
+  max: number,
+  seed?: number
+): number {
+  const rng = new Mulberry32(seed);
+  return Math.floor(rng.random() * (max - min + 1)) + min;
 }
 
 /**
@@ -13,7 +19,7 @@ export function generateRandomNumber(min: number, max: number): number {
  *
  * @param file - The name of the JSON file (without the extension) to be processed.
  * @returns The JavaScript object parsed from the JSON file.
- * 
+ *
  * @example
  * const fileName = "example";
  * const processedData = processFile(fileName);
@@ -101,9 +107,10 @@ Array.prototype.formattedJoin = function () {
  * @returns A randomly selected item from the `items` array, with
  * a probability of selection determined by its weight.
  */
-export function weightedRandom(items: any[], weights: number[]): any {
+export function weightedRandom(items: any[], weights: number[], seed?: number): any {
+  const rng = new Mulberry32(seed);
   const totalWeight = weights.reduce((sum, weight) => sum + weight, 0);
-  const randomValue = Math.random() * totalWeight;
+  const randomValue = rng.random() * totalWeight;
   let cumulativeWeight = 0;
 
   for (let index = 0; index < items.length; index++) {

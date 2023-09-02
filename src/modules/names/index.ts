@@ -1,3 +1,4 @@
+import { Mulberry32 } from "../../utils/mulberry32";
 import { processFile } from "../../utils/utils";
 
 export interface Name {
@@ -6,21 +7,28 @@ export interface Name {
 }
 
 export class NamesModule {
+  private seed: number | undefined;
+
+  constructor(seed?: number) {
+    this.seed = seed;
+  }
+
   private loadNamesData(): any {
     return processFile("names")["data"];
   }
 
   public getRandomName(sex: string): Name {
+    const rng = new Mulberry32(this.seed);
     const names = this.loadNamesData().find(
       (entry: { [x: string]: any }) => entry[sex]
     );
 
     const randomIndex = Math.floor(
-      Math.random() * names[sex].length
+      rng.random() * names[sex].length
     );
     const { name, nicknames } = names[sex][randomIndex];
 
-    const randomNicknameIndex = Math.floor(Math.random() * nicknames.length);
+    const randomNicknameIndex = Math.floor(rng.random() * nicknames.length);
     const nickname = nicknames[randomNicknameIndex];
 
     return { name, nickname };

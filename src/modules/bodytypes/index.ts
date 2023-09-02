@@ -1,3 +1,4 @@
+import { Mulberry32 } from "../../utils/mulberry32";
 import { processFile } from "../../utils/utils";
 
 export interface BodyType {
@@ -7,23 +8,31 @@ export interface BodyType {
 }
 
 export class BodyTypesModule {
+  private seed: number | undefined;
+
+  constructor(seed?: number) {
+    this.seed = seed;
+  }
+
   private loadBodyTypeData(): any {
     return processFile("bodytypes")["data"];
   }
 
   public getRandomBodyType(sex: string): BodyType {
+    const rng = new Mulberry32(this.seed);
+
     const bodyTypes = this.loadBodyTypeData();
     const keys = Object.keys(bodyTypes[sex]);
 
-    const randomIndex = Math.floor(Math.random() * keys.length);
+    const randomIndex = Math.floor(rng.random() * keys.length);
     const type = keys[randomIndex];
 
     const { heightRange, weightRange } = bodyTypes[sex][keys[randomIndex]];
 
     const height =
-      Math.random() * (heightRange[1] - heightRange[0]) + heightRange[0];
+      rng.random() * (heightRange[1] - heightRange[0]) + heightRange[0];
     const weight =
-      Math.random() * (weightRange[1] - weightRange[0]) + weightRange[0];
+      rng.random() * (weightRange[1] - weightRange[0]) + weightRange[0];
 
     return {
       type,

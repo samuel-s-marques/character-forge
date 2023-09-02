@@ -26,26 +26,54 @@ export interface Character {
 }
 
 export class CharacterForge {
-  private namesModule = new mod.NamesModule();
-  private surnamesModule = new mod.SurnamesModule();
-  private sexesModule = new mod.SexesModule();
-  private pronounsModule = new mod.PronounsModule();
-  private agesModule = new mod.AgesModule();
-  private hairColorsModule = new mod.HairColorsModule();
-  private eyeColorsModule = new mod.EyeColorsModule();
-  private hairStylesModule = new mod.HairStylesModule();
-  private occupationsModule = new mod.OccupationsModule();
-  private personalityTraitsModule = new mod.PersonalityTraitModule();
-  private socialClassesModule = new mod.SocialClassesModule();
-  private bodyTypesModule = new mod.BodyTypesModule();
-  private ethnicitiesModule = new mod.EthnicitiesModule();
-  private sexualitiesModule = new mod.SexualitiesModule();
-  private hobbiesModule = new mod.HobbiesModule();
-  private alignmentsModule = new mod.AlignmentsModule();
-  private phobiasModule = new mod.PhobiasModule();
-  private politicsModule = new mod.PoliticsModule();
-  private clothingsModule = new mod.ClothingsModule();
-  private summariesModule = new mod.SummariesModule();
+  private seed: number | undefined;
+  private namesModule: mod.NamesModule;
+  private surnamesModule: mod.SurnamesModule;
+  private sexesModule: mod.SexesModule;
+  private pronounsModule: mod.PronounsModule;
+  private agesModule: mod.AgesModule;
+
+  private hairColorsModule: mod.HairColorsModule;
+  private eyeColorsModule: mod.EyeColorsModule;
+  private hairStylesModule: mod.HairStylesModule;
+  private occupationsModule: mod.OccupationsModule;
+  private personalityTraitsModule: mod.PersonalityTraitModule;
+
+  private socialClassesModule: mod.SocialClassesModule;
+  private bodyTypesModule: mod.BodyTypesModule;
+  private ethnicitiesModule: mod.EthnicitiesModule;
+  private sexualitiesModule: mod.SexualitiesModule;
+  private hobbiesModule: mod.HobbiesModule;
+  private alignmentsModule: mod.AlignmentsModule;
+  private phobiasModule: mod.PhobiasModule;
+  private politicsModule: mod.PoliticsModule;
+  private clothingsModule: mod.ClothingsModule;
+  private summariesModule: mod.SummariesModule;
+
+  constructor(seed?: number) {
+    this.seed = seed;
+
+    this.namesModule = new mod.NamesModule(this.seed);
+    this.surnamesModule = new mod.SurnamesModule(this.seed);
+    this.sexesModule = new mod.SexesModule(this.seed);
+    this.pronounsModule = new mod.PronounsModule();
+    this.agesModule = new mod.AgesModule(this.seed);
+    this.hairColorsModule = new mod.HairColorsModule(this.seed);
+    this.eyeColorsModule = new mod.EyeColorsModule(this.seed);
+    this.hairStylesModule = new mod.HairStylesModule(this.seed);
+    this.occupationsModule = new mod.OccupationsModule(this.seed);
+    this.personalityTraitsModule = new mod.PersonalityTraitModule(this.seed);
+    this.socialClassesModule = new mod.SocialClassesModule(this.seed);
+    this.bodyTypesModule = new mod.BodyTypesModule(this.seed);
+    this.ethnicitiesModule = new mod.EthnicitiesModule(this.seed);
+    this.sexualitiesModule = new mod.SexualitiesModule(this.seed);
+    this.hobbiesModule = new mod.HobbiesModule(this.seed);
+    this.alignmentsModule = new mod.AlignmentsModule(this.seed);
+    this.phobiasModule = new mod.PhobiasModule(this.seed);
+    this.politicsModule = new mod.PoliticsModule(this.seed);
+    this.clothingsModule = new mod.ClothingsModule(this.seed);
+    this.summariesModule = new mod.SummariesModule(this.seed);
+  }
 
   public forge(): Character {
     const sex = this.sexesModule.getRandomSex();

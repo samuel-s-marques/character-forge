@@ -1,10 +1,18 @@
 import { Character } from "../../character-forge";
+import { Mulberry32 } from "../../utils/mulberry32";
 import { PersonalityTrait } from "../personalitytraits";
 
 export class SummariesModule {
+  private seed: number | undefined;
+
+  constructor(seed?: number) {
+    this.seed = seed;
+  }
+
   public getIntroduction(character: Character): string {
     let introduction: string = "";
 
+    const rng = new Mulberry32(this.seed);
     const name: string = character.name;
     let nickname: string = " ";
     const surname: string = character.surname;
@@ -39,7 +47,7 @@ export class SummariesModule {
       `Meet ${name}${nickname}${surname}, a ${age}-year-old ${occupation} who finds solace in ${hobbies}.`,
     ];
 
-    const randomIndex = Math.floor(Math.random() * introductions.length);
+    const randomIndex = Math.floor(rng.random() * introductions.length);
 
     introduction = introductions[randomIndex];
 
@@ -58,7 +66,7 @@ export class SummariesModule {
       ];
 
       const randomIndex = Math.floor(
-        Math.random() * positiveTraitIntroductions.length
+        rng.random() * positiveTraitIntroductions.length
       );
 
       positiveTraitIntroduction = positiveTraitIntroductions[randomIndex];
@@ -76,7 +84,7 @@ export class SummariesModule {
       ];
 
       const randomIndex = Math.floor(
-        Math.random() * negativeTraitIntroductions.length
+        rng.random() * negativeTraitIntroductions.length
       );
 
       negativeTraitIntroduction = negativeTraitIntroductions[randomIndex];
@@ -90,6 +98,7 @@ export class SummariesModule {
   }
 
   public getPhysicalDescription(character: Character): string {
+    const rng = new Mulberry32(this.seed);
     const name: string = character.name;
     const hairStyle: string = character.hairStyle;
     const hairColor: string = character.hairColor;
@@ -106,7 +115,7 @@ export class SummariesModule {
       } ${eyeColor} eyes.`,
     ];
 
-    const randomIndex = Math.floor(Math.random() * physicalDescriptions.length);
+    const randomIndex = Math.floor(rng.random() * physicalDescriptions.length);
 
     let physicalDescription: string = physicalDescriptions[randomIndex];
 
@@ -116,13 +125,14 @@ export class SummariesModule {
   public getBackstory(character: Character): string {
     let backstory: string = "";
 
+    const rng = new Mulberry32(this.seed);
     const ethnicity = character.ethnicity;
     const birthplace = character.birthplace;
     const pronouns = character.pronouns;
     const sexuality = character.sexuality.sexuality;
 
     const randomTraitIndex = Math.floor(
-      Math.random() * character.personalityTraits.length
+      rng.random() * character.personalityTraits.length
     );
     const randomTrait: string =
       character.personalityTraits[randomTraitIndex].name;
@@ -142,7 +152,7 @@ export class SummariesModule {
       } ${ethnicity.capitalize()} heritage.`,
     ];
 
-    const randomIndex = Math.floor(Math.random() * backstories.length);
+    const randomIndex = Math.floor(rng.random() * backstories.length);
     backstory = backstories[randomIndex];
 
     const occupations: string[] = [
@@ -164,9 +174,7 @@ export class SummariesModule {
       } sheds light on ${pronouns.possessiveAdjective} perspectives.`,
     ];
 
-    const randomOccupationIndex = Math.floor(
-      Math.random() * occupations.length
-    );
+    const randomOccupationIndex = Math.floor(rng.random() * occupations.length);
     backstory += ` ${occupations[randomOccupationIndex]}`;
 
     if (character.phobia !== undefined) {
@@ -181,7 +189,7 @@ export class SummariesModule {
         `Although, ${pronouns.objectPronoun} phobia of ${character.phobia} remains a hidden vulnerability.`,
       ];
 
-      const randomIndex = Math.floor(Math.random() * phobias.length);
+      const randomIndex = Math.floor(rng.random() * phobias.length);
       const phobia = phobias[randomIndex];
 
       backstory += ` ${phobia}`;
