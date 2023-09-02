@@ -1,5 +1,5 @@
 export class Mulberry32 {
-  private seed: number;
+  public seed: number;
 
   constructor(seed?: number) {
     if (seed !== undefined) {
