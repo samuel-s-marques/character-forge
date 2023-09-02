@@ -1,6 +1,8 @@
 import * as mod from "./index";
+import { Mulberry32 } from "./utils/mulberry32";
 
 export interface Character {
+  seed: number;
   name: string;
   nickname: string | undefined;
   surname: string;
@@ -26,19 +28,17 @@ export interface Character {
 }
 
 export class CharacterForge {
-  private seed: number | undefined;
+  private seed: number;
   private namesModule: mod.NamesModule;
   private surnamesModule: mod.SurnamesModule;
   private sexesModule: mod.SexesModule;
   private pronounsModule: mod.PronounsModule;
   private agesModule: mod.AgesModule;
-
   private hairColorsModule: mod.HairColorsModule;
   private eyeColorsModule: mod.EyeColorsModule;
   private hairStylesModule: mod.HairStylesModule;
   private occupationsModule: mod.OccupationsModule;
   private personalityTraitsModule: mod.PersonalityTraitModule;
-
   private socialClassesModule: mod.SocialClassesModule;
   private bodyTypesModule: mod.BodyTypesModule;
   private ethnicitiesModule: mod.EthnicitiesModule;
@@ -51,7 +51,12 @@ export class CharacterForge {
   private summariesModule: mod.SummariesModule;
 
   constructor(seed?: number) {
-    this.seed = seed;
+    if (seed === undefined) {
+      const rng = new Mulberry32();
+      this.seed = rng.random();
+    } else {
+      this.seed = seed;
+    }
 
     this.namesModule = new mod.NamesModule(this.seed);
     this.surnamesModule = new mod.SurnamesModule(this.seed);
@@ -99,6 +104,7 @@ export class CharacterForge {
     const clothings = this.clothingsModule.getRandomClothing(sex);
 
     let character: Character = {
+      seed: this.seed,
       name,
       nickname,
       surname,
