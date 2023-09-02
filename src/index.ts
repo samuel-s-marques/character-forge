@@ -1,7 +1,7 @@
 import { AgesModule } from "./modules/age";
 import { AlignmentsModule } from "./modules/alignments";
 import { BodyTypesModule, BodyType } from "./modules/bodytypes";
-import { CharacterForge } from "./character-forge";
+import { CharacterForge, Character } from "./character-forge";
 import { EthnicitiesModule } from "./modules/ethnicities";
 import { EyeColorsModule } from "./modules/eyecolors";
 import { HairColorsModule } from "./modules/haircolors";
@@ -28,6 +28,7 @@ export {
   AlignmentsModule,
   BodyTypesModule,
   BodyType,
+  Character,
   CharacterForge,
   EthnicitiesModule,
   SummariesModule,
