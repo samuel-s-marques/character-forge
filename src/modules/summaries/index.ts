@@ -128,7 +128,7 @@ export class SummariesModule {
       character.personalityTraits[randomTraitIndex].name;
 
     const backstories: string[] = [
-      `${pronouns.subjectPronoun.capitalize()} is ${ethnicity.capitalize()} and defines ${
+      `${pronouns.subjectPronoun.capitalize()} is ${ethnicity.capitalize()}, born in ${birthplace}, and defines ${
         pronouns.objectPronoun
       }self as ${sexuality}.`,
       `Born in ${birthplace}, ${character.name} embraces ${
