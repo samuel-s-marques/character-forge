@@ -1,6 +1,5 @@
 import { generateRandomNumber } from "../../utils/utils";
 
-
 export class AgesModule {
   private seed: number | undefined;
 
