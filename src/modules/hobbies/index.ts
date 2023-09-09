@@ -1,4 +1,4 @@
-import { Mulberry32 } from "../../utils/mulberry32";
+import { splitmix32 } from "../../utils/splitmix32";
 import { generateRandomNumber, processFile } from "../../utils/utils";
 
 export class HobbiesModule {
@@ -13,7 +13,7 @@ export class HobbiesModule {
   }
 
   public getRandomHobbies(min: number = 1, max: number = 3): string[] {
-    const rng = new Mulberry32(this.seed);
+    const rng = new splitmix32(this.seed);
     const hobbies = this.loadHobbiesData();
     const selectedHobbies: string[] = [];
     const numItemsToPick = generateRandomNumber(min, max, this.seed);

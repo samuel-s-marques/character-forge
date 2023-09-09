@@ -1,13 +1,13 @@
 import path = require("path");
 import fs = require("fs");
-import { Mulberry32 } from "./mulberry32";
+import { splitmix32 } from "./splitmix32";
 
 export function generateRandomNumber(
   min: number,
   max: number,
   seed?: number
 ): number {
-  const rng = new Mulberry32(seed);
+  const rng = new splitmix32(seed);
   return Math.floor(rng.random() * (max - min + 1)) + min;
 }
 
@@ -108,7 +108,7 @@ Array.prototype.formattedJoin = function () {
  * a probability of selection determined by its weight.
  */
 export function weightedRandom(items: any[], weights: number[], seed?: number): any {
-  const rng = new Mulberry32(seed);
+  const rng = new splitmix32(seed);
   const totalWeight = weights.reduce((sum, weight) => sum + weight, 0);
   const randomValue = rng.random() * totalWeight;
   let cumulativeWeight = 0;

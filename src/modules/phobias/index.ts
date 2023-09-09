@@ -1,4 +1,4 @@
-import { Mulberry32 } from "../../utils/mulberry32";
+import { splitmix32 } from "../../utils/splitmix32";
 import { processFile } from "../../utils/utils";
 
 export class PhobiasModule {
@@ -13,7 +13,7 @@ export class PhobiasModule {
   }
 
   public getRandomPhobia(chance: number = 0.2): string | undefined {
-    const rng = new Mulberry32(this.seed);
+    const rng = new splitmix32(this.seed);
 
     if (rng.random() > chance) {
       return undefined;

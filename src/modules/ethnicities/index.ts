@@ -1,4 +1,4 @@
-import { Mulberry32 } from "../../utils/mulberry32";
+import { splitmix32 } from "../../utils/splitmix32";
 import { processFile } from "../../utils/utils";
 
 export class EthnicitiesModule {
@@ -13,7 +13,7 @@ export class EthnicitiesModule {
   }
 
   public getRandomEthnicity(): string {
-    const rng = new Mulberry32(this.seed);
+    const rng = new splitmix32(this.seed);
     const ethnicities = this.loadEthnicityData();
     const randomIndex = Math.floor(rng.random() * ethnicities.length);
 
@@ -21,7 +21,7 @@ export class EthnicitiesModule {
   }
 
   public getRandomBirthplaceFromEthnicity(ethnicity: string): string {
-    const rng = new Mulberry32(this.seed);
+    const rng = new splitmix32(this.seed);
     const ethnicities = this.loadEthnicityData();
     const selectedEthnicity = ethnicities.find(
       (e: { name: string }) => e.name === ethnicity

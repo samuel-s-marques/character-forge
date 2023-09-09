@@ -1,4 +1,4 @@
-import { Mulberry32 } from "../../utils/mulberry32";
+import { splitmix32 } from "../../utils/splitmix32";
 import { processFile } from "../../utils/utils";
 
 export interface Name {
@@ -18,7 +18,7 @@ export class NamesModule {
   }
 
   public getRandomName(sex: string): Name {
-    const rng = new Mulberry32(this.seed);
+    const rng = new splitmix32(this.seed);
     const names = this.loadNamesData().find(
       (entry: { [x: string]: any }) => entry[sex]
     );

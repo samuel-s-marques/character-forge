@@ -1,4 +1,4 @@
-import { Mulberry32 } from "../../utils/mulberry32";
+import { splitmix32 } from "../../utils/splitmix32";
 import { processFile } from "../../utils/utils";
 
 export interface BodyType {
@@ -19,7 +19,7 @@ export class BodyTypesModule {
   }
 
   public getRandomBodyType(sex: string): BodyType {
-    const rng = new Mulberry32(this.seed);
+    const rng = new splitmix32(this.seed);
 
     const bodyTypes = this.loadBodyTypeData();
     const keys = Object.keys(bodyTypes[sex]);

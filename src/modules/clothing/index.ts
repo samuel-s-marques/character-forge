@@ -1,4 +1,4 @@
-import { Mulberry32 } from "../../utils/mulberry32";
+import { splitmix32 } from "../../utils/splitmix32";
 import { generateRandomNumber, processFile } from "../../utils/utils";
 
 export interface Clothing {
@@ -22,7 +22,7 @@ export class ClothingsModule {
   }
 
   public getRandomUpperbody(sex: string): string {
-    const rng = new Mulberry32(this.seed);
+    const rng = new splitmix32(this.seed);
     const upperbodies = this.loadClothingData().find(
       (entry: { [x: string]: any }) => entry[sex]
     )[sex]["upperbody"];
@@ -32,7 +32,7 @@ export class ClothingsModule {
   }
 
   public getRandomLowerbody(sex: string): string {
-    const rng = new Mulberry32(this.seed);
+    const rng = new splitmix32(this.seed);
     const lowerbodies = this.loadClothingData().find(
       (entry: { [x: string]: any }) => entry[sex]
     )[sex]["lowerbody"];
@@ -45,7 +45,7 @@ export class ClothingsModule {
     sex: string,
     chance: number = 0.3
   ): string | undefined {
-    const rng = new Mulberry32(this.seed);
+    const rng = new splitmix32(this.seed);
 
     if (rng.random() > chance) {
       return undefined;
@@ -65,7 +65,7 @@ export class ClothingsModule {
     max: number = 3,
     chance = 0.2
   ): string[] {
-    const rng = new Mulberry32(this.seed);
+    const rng = new splitmix32(this.seed);
     const accessories = this.loadClothingData().find(
       (entry: { [x: string]: any }) => entry[sex]
     )[sex]["accessories"];
@@ -86,7 +86,7 @@ export class ClothingsModule {
   }
 
   public getRandomFootwear(sex: string): string {
-    const rng = new Mulberry32(this.seed);
+    const rng = new splitmix32(this.seed);
     const footwear = this.loadClothingData().find(
       (entry: { [x: string]: any }) => entry[sex]
     )[sex]["footwear"];
@@ -96,7 +96,7 @@ export class ClothingsModule {
   }
 
   public getRandomOuterwear(sex: string, chance: number): string | undefined {
-    const rng = new Mulberry32(this.seed);
+    const rng = new splitmix32(this.seed);
 
     if (rng.random() > chance) {
       return undefined;

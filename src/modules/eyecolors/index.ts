@@ -1,4 +1,4 @@
-import { Mulberry32 } from "../../utils/mulberry32";
+import { splitmix32 } from "../../utils/splitmix32";
 import { processFile } from "../../utils/utils";
 
 export class EyeColorsModule {
@@ -13,7 +13,7 @@ export class EyeColorsModule {
   }
 
   public getRandomEyeColor(): string {
-    const rng = new Mulberry32(this.seed);
+    const rng = new splitmix32(this.seed);
     const eyeColors = this.loadNamesData();
     const randomIndex = Math.floor(rng.random() * eyeColors.length);
 

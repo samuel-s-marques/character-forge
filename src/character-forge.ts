@@ -1,5 +1,5 @@
 import * as mod from "./index";
-import { Mulberry32 } from "./utils/mulberry32";
+import { splitmix32 } from "./utils/splitmix32";
 
 export interface Character {
   seed: number;
@@ -52,7 +52,7 @@ export class CharacterForge {
 
   constructor(seed?: number) {
     if (seed === undefined) {
-      const rng = new Mulberry32();
+      const rng = new splitmix32();
       this.seed = rng.random();
     } else {
       this.seed = seed;

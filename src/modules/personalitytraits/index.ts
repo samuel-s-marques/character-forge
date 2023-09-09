@@ -1,4 +1,4 @@
-import { Mulberry32 } from "../../utils/mulberry32";
+import { splitmix32 } from "../../utils/splitmix32";
 import { processFile } from "../../utils/utils";
 
 export interface PersonalityTrait {
@@ -19,7 +19,7 @@ export class PersonalityTraitModule {
   }
 
   public pickRandomTrait(count: number = 3): PersonalityTrait[] {
-    const rng = new Mulberry32(this.seed);
+    const rng = new splitmix32(this.seed);
     const personalityTraitData = this.loadPersonalityTraitData();
     const selectedTraits: PersonalityTrait[] = [];
 

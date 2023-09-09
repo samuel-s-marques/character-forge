@@ -1,4 +1,4 @@
-import { Mulberry32 } from "../../utils/mulberry32";
+import { splitmix32 } from "../../utils/splitmix32";
 import {
   generateRandomNumber,
   processFile,
@@ -57,7 +57,7 @@ export class SexualitiesModule {
   }
 
   public getRandomSexuality(): string {
-    const rng = new Mulberry32(this.seed);
+    const rng = new splitmix32(this.seed);
     const sexualities = this.loadSexualityData()["sexualities"];
     const randomIndex = Math.floor(rng.random() * sexualities.length);
 

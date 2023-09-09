@@ -1,5 +1,5 @@
 import { Character } from "../../character-forge";
-import { Mulberry32 } from "../../utils/mulberry32";
+import { splitmix32 } from "../../utils/splitmix32";
 import { PersonalityTrait } from "../personalitytraits";
 
 export class SummariesModule {
@@ -12,7 +12,7 @@ export class SummariesModule {
   public getIntroduction(character: Character): string {
     let introduction: string = "";
 
-    const rng = new Mulberry32(this.seed);
+    const rng = new splitmix32(this.seed);
     const name: string = character.name;
     let nickname: string = " ";
     const surname: string = character.surname;
@@ -98,7 +98,7 @@ export class SummariesModule {
   }
 
   public getPhysicalDescription(character: Character): string {
-    const rng = new Mulberry32(this.seed);
+    const rng = new splitmix32(this.seed);
     const name: string = character.name;
     const hairStyle: string = character.hairStyle;
     const hairColor: string = character.hairColor;
@@ -125,7 +125,7 @@ export class SummariesModule {
   public getBackstory(character: Character): string {
     let backstory: string = "";
 
-    const rng = new Mulberry32(this.seed);
+    const rng = new splitmix32(this.seed);
     const ethnicity = character.ethnicity;
     const birthplace = character.birthplace;
     const pronouns = character.pronouns;
