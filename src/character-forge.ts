@@ -53,7 +53,7 @@ export class CharacterForge {
   constructor(seed?: number) {
     if (seed === undefined) {
       const rng = new splitmix32();
-      this.seed = rng.random();
+      this.seed = rng.random() * Number.MAX_SAFE_INTEGER;
     } else {
       this.seed = seed;
     }
