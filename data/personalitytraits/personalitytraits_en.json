@@ -258,7 +258,7 @@
     {
       "name": "accepting",
       "type": "positive",
-      "contradictions": ["accepting"]
+      "contradictions": ["perfectionistic"]
     },
     {
       "name": "cynical",
