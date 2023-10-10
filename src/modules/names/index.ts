@@ -23,9 +23,7 @@ export class NamesModule {
       (entry: { [x: string]: any }) => entry[sex]
     );
 
-    const randomIndex = Math.floor(
-      rng.random() * names[sex].length
-    );
+    const randomIndex = Math.floor(rng.random() * names[sex].length);
     const { name, nicknames } = names[sex][randomIndex];
 
     const randomNicknameIndex = Math.floor(rng.random() * nicknames.length);
