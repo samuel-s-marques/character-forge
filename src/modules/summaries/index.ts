@@ -56,10 +56,10 @@ export class SummariesModule {
 
       const positiveTraitIntroductions = [
         `${pronouns.subjectPronoun.capitalize()} radiates ${formattedPositiveTraits} traits.`,
-        `${pronouns.possessiveAdjective.capitalize()} ${formattedPositiveTraits} traits makes ${
+        `${pronouns.possessiveAdjective.capitalize()} ${formattedPositiveTraits} traits make ${
           pronouns.objectPronoun
         } a social gem.`,
-        `${pronouns.possessiveAdjective.capitalize()} ${formattedPositiveTraits} traits makes ${
+        `${pronouns.possessiveAdjective.capitalize()} ${formattedPositiveTraits} traits make ${
           pronouns.objectPronoun
         } a magnet for camaraderie.`,
         `${pronouns.subjectPronoun.capitalize()} exudes ${formattedPositiveTraits} traits.`,
@@ -79,7 +79,7 @@ export class SummariesModule {
         `Although traces of ${formattedNegativeTraits} traits occasionally surface.`,
         `But occasional bouts of ${formattedNegativeTraits} traits can emerge.`,
         `A touch of ${formattedNegativeTraits} traits surfaces now and then.`,
-        `But occasionally peppered with hints of ${formattedNegativeTraits} traits`,
+        `But occasionally peppered with hints of ${formattedNegativeTraits} traits.`,
         `Although occasional ${formattedNegativeTraits} traits tendencies arise.`,
       ];
 
