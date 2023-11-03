@@ -2,6 +2,11 @@
   "data": [
     {
       "name": "south asian",
+      "skin_tones": [
+        { "tone": "light", "weight": 5 },
+        { "tone": "medium", "weight": 4 },
+        { "tone": "dark", "weight": 1 }
+      ],
       "birthplaces": [
         "Sri Lanka",
         "Bangladesh",
@@ -16,6 +21,11 @@
     },
     {
       "name": "southeast asian",
+      "skin_tones": [
+        { "tone": "light", "weight": 3 },
+        { "tone": "medium", "weight": 4 },
+        { "tone": "dark", "weight": 2 }
+      ],
       "birthplaces": [
         "Georgia",
         "Armenia",
@@ -38,6 +48,11 @@
     },
     {
       "name": "central asian",
+      "skin_tones": [
+        { "tone": "light", "weight": 4 },
+        { "tone": "medium", "weight": 3 },
+        { "tone": "dark", "weight": 1 }
+      ],
       "birthplaces": [
         "Tajikistan",
         "Uzbekistan",
@@ -48,6 +63,11 @@
     },
     {
       "name": "east asian",
+      "skin_tones": [
+        { "tone": "light", "weight": 4 },
+        { "tone": "medium", "weight": 3 },
+        { "tone": "dark", "weight": 1 }
+      ],
       "birthplaces": [
         "China",
         "Mongolia",
@@ -61,6 +81,11 @@
     },
     {
       "name": "western asian",
+      "skin_tones": [
+        { "tone": "light", "weight": 3 },
+        { "tone": "medium", "weight": 4 },
+        { "tone": "dark", "weight": 2 }
+      ],
       "birthplaces": [
         "Brunei",
         "Cambodia",
@@ -77,6 +102,11 @@
     },
     {
       "name": "northern african",
+      "skin_tones": [
+        { "tone": "light", "weight": 3 },
+        { "tone": "medium", "weight": 4 },
+        { "tone": "dark", "weight": 3 }
+      ],
       "birthplaces": [
         "Algeria",
         "Libya",
@@ -88,10 +118,20 @@
     },
     {
       "name": "southern african",
+      "skin_tones": [
+        { "tone": "light", "weight": 2 },
+        { "tone": "medium", "weight": 4 },
+        { "tone": "dark", "weight": 4 }
+      ],
       "birthplaces": ["Namibia", "Botswana", "South Africa"]
     },
     {
       "name": "central african",
+      "skin_tones": [
+        { "tone": "light", "weight": 1 },
+        { "tone": "medium", "weight": 3 },
+        { "tone": "dark", "weight": 4 }
+      ],
       "birthplaces": [
         "Chad",
         "Cameroon",
@@ -103,6 +143,11 @@
     },
     {
       "name": "eastern african",
+      "skin_tones": [
+        { "tone": "light", "weight": 2 },
+        { "tone": "medium", "weight": 3 },
+        { "tone": "dark", "weight": 4 }
+      ],
       "birthplaces": [
         "Ethiopia",
         "Somalia",
@@ -118,6 +163,11 @@
     },
     {
       "name": "western african",
+      "skin_tones": [
+        { "tone": "dark", "weight": 5 },
+        { "tone": "medium", "weight": 3 },
+        { "tone": "light", "weight": 1 }
+      ],
       "birthplaces": [
         "Niger",
         "Mauritania",
@@ -137,10 +187,20 @@
     },
     {
       "name": "southern european",
+      "skin_tones": [
+        { "tone": "medium", "weight": 4 },
+        { "tone": "olive", "weight": 3 },
+        { "tone": "light", "weight": 2 }
+      ],
       "birthplaces": ["Portugal", "Spain", "Italy", "Malta", "Greece"]
     },
     {
       "name": "western european",
+      "skin_tones": [
+        { "tone": "light", "weight": 4 },
+        { "tone": "medium", "weight": 3 },
+        { "tone": "olive", "weight": 2 }
+      ],
       "birthplaces": [
         "France",
         "Switzerland",
@@ -153,10 +213,20 @@
     },
     {
       "name": "northern european",
+      "skin_tones": [
+        { "tone": "light", "weight": 4 },
+        { "tone": "pale", "weight": 3 },
+        { "tone": "medium", "weight": 2 }
+      ],
       "birthplaces": ["Finland", "Sweden", "Norway", "Denmark", "Iceland"]
     },
     {
       "name": "eastern european",
+      "skin_tones": [
+        { "tone": "light", "weight": 4 },
+        { "tone": "medium", "weight": 3 },
+        { "tone": "olive", "weight": 2 }
+      ],
       "birthplaces": [
         "Romania",
         "Bulgaria",
@@ -180,10 +250,20 @@
     },
     {
       "name": "british",
+      "skin_tones": [
+        { "tone": "fair", "weight": 5 },
+        { "tone": "light", "weight": 4 },
+        { "tone": "medium", "weight": 3 }
+      ],
       "birthplaces": ["Ireland", "Great Britain (UK)"]
     },
     {
       "name": "latin american",
+      "skin_tones": [
+        { "tone": "light", "weight": 3 },
+        { "tone": "medium", "weight": 4 },
+        { "tone": "dark", "weight": 3 }
+      ],
       "birthplaces": [
         "Brazil",
         "Argentina",
@@ -201,6 +281,11 @@
     },
     {
       "name": "central american",
+      "skin_tones": [
+        { "tone": "light", "weight": 3 },
+        { "tone": "medium", "weight": 4 },
+        { "tone": "dark", "weight": 3 }
+      ],
       "birthplaces": [
         "Guatemala",
         "Nicaragua",
@@ -213,6 +298,11 @@
     },
     {
       "name": "north american",
+      "skin_tones": [
+        { "tone": "fair", "weight": 4 },
+        { "tone": "light", "weight": 4 },
+        { "tone": "medium", "weight": 2 }
+      ],
       "birthplaces": ["United States", "Canada", "Mexico", "Cuba"]
     }
   ]
