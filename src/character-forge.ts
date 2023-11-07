@@ -16,6 +16,7 @@ export interface Character {
   clothings: mod.Clothing;
   ethnicity: string;
   birthplace: string;
+  religion: string;
   skinTone: string;
   sexuality: mod.Sexuality;
   occupation: string;
@@ -97,6 +98,8 @@ export class CharacterForge {
     const ethnicity = this.ethnicitiesModule.getRandomEthnicity();
     const birthplace =
       this.ethnicitiesModule.getRandomBirthplaceFromEthnicity(ethnicity);
+    const religion =
+      this.ethnicitiesModule.getRandomReligionFromEthnicity(ethnicity);
     const skinTone =
       this.ethnicitiesModule.getRandomSkinToneFromEthnicity(ethnicity);
     const sexuality = this.sexualitiesModule.getSexuality(age, sex);
@@ -122,6 +125,7 @@ export class CharacterForge {
       ethnicity,
       skinTone,
       birthplace,
+      religion,
       sexuality,
       occupation,
       phobia,
