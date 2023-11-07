@@ -7,6 +7,14 @@
         { "tone": "medium", "weight": 4 },
         { "tone": "dark", "weight": 1 }
       ],
+      "religions": [
+        { "religion": "hinduism", "weight": 64 },
+        { "religion": "islam", "weight": 29 },
+        { "religion": "sikhism", "weight": 2 },
+        { "religion": "buddhism", "weight": 2 },
+        { "religion": "christianity", "weight": 2 },
+        { "religion": "atheism", "weight": 1 }
+      ],
       "birthplaces": [
         "Sri Lanka",
         "Bangladesh",
@@ -25,6 +33,13 @@
         { "tone": "light", "weight": 3 },
         { "tone": "medium", "weight": 4 },
         { "tone": "dark", "weight": 2 }
+      ],
+      "religions": [
+        { "religion": "islam", "weight": 43 },
+        { "religion": "buddhism", "weight": 40 },
+        { "religion": "christianity", "weight": 12 },
+        { "religion": "atheism", "weight": 5 },
+        { "religion": "hinduism", "weight": 5 }
       ],
       "birthplaces": [
         "Georgia",
@@ -53,6 +68,16 @@
         { "tone": "medium", "weight": 3 },
         { "tone": "dark", "weight": 1 }
       ],
+      "religions": [
+        { "religion": "sunni islam", "weight": 83 },
+        { "religion": "buddhism", "weight": 7.3 },
+        { "religion": "shia islam", "weight": 3.2 },
+        { "religion": "eastern christianity", "weight": 3.2 },
+        { "religion": "atheism", "weight": 2 },
+        { "religion": "western christianity", "weight": 0.4 },
+        { "religion": "judaism", "weight": 0.02 },
+        { "religion": "zoroastrianism", "weight": 0.01 }
+      ],
       "birthplaces": [
         "Tajikistan",
         "Uzbekistan",
@@ -67,6 +92,13 @@
         { "tone": "light", "weight": 4 },
         { "tone": "medium", "weight": 3 },
         { "tone": "dark", "weight": 1 }
+      ],
+      "religions": [
+        { "religion": "buddhism", "weight": 80 },
+        { "religion": "confuciannism", "weight": 8 },
+        { "religion": "taoism", "weight": 7 },
+        { "religion": "christianity", "weight": 4 },
+        { "religion": "atheism", "weight": 1 }
       ],
       "birthplaces": [
         "China",
@@ -85,6 +117,13 @@
         { "tone": "light", "weight": 3 },
         { "tone": "medium", "weight": 4 },
         { "tone": "dark", "weight": 2 }
+      ],
+      "religions": [
+        { "religion": "islam", "weight": 92 },
+        { "religion": "christianity", "weight": 3.8 },
+        { "religion": "jewish", "weight": 2 },
+        { "religion": "atheism", "weight": 1.1 },
+        { "religion": "hinduism", "weight": 0.3 }
       ],
       "birthplaces": [
         "Brunei",
@@ -107,6 +146,11 @@
         { "tone": "medium", "weight": 4 },
         { "tone": "dark", "weight": 3 }
       ],
+      "religions": [
+        { "religion": "islam", "weight": 90 },
+        { "religion": "christianity", "weight": 8 },
+        { "religion": "atheism", "weight": 2 }
+      ],
       "birthplaces": [
         "Algeria",
         "Libya",
@@ -123,6 +167,13 @@
         { "tone": "medium", "weight": 4 },
         { "tone": "dark", "weight": 4 }
       ],
+      "religions": [
+        { "religion": "christianity", "weight": 80 },
+        { "religion": "islam", "weight": 2.5 },
+        { "religion": "hinduism", "weight": 1.8 },
+        { "religion": "atheism", "weight": 1 },
+        { "religion": "judaism", "weight": 0.2 }
+      ],
       "birthplaces": ["Namibia", "Botswana", "South Africa"]
     },
     {
@@ -131,6 +182,12 @@
         { "tone": "light", "weight": 1 },
         { "tone": "medium", "weight": 3 },
         { "tone": "dark", "weight": 4 }
+      ],
+      "religions": [
+        { "religion": "christianity", "weight": 63 },
+        { "religion": "islam", "weight": 31 },
+        { "religion": "atheism", "weight": 5 },
+        { "religion": "hinduism", "weight": 5 }
       ],
       "birthplaces": [
         "Chad",
@@ -147,6 +204,12 @@
         { "tone": "light", "weight": 2 },
         { "tone": "medium", "weight": 3 },
         { "tone": "dark", "weight": 4 }
+      ],
+      "religions": [
+        { "religion": "christianity", "weight": 68 },
+        { "religion": "islam", "weight": 31 },
+        { "religion": "atheism", "weight": 5 },
+        { "religion": "hinduism", "weight": 5 }
       ],
       "birthplaces": [
         "Ethiopia",
@@ -167,6 +230,11 @@
         { "tone": "dark", "weight": 5 },
         { "tone": "medium", "weight": 3 },
         { "tone": "light", "weight": 1 }
+      ],
+      "religions": [
+        { "religion": "islam", "weight": 60 },
+        { "religion": "christianity", "weight": 20 },
+        { "religion": "animism/indigenous", "weight": 20 }
       ],
       "birthplaces": [
         "Niger",
@@ -192,6 +260,11 @@
         { "tone": "olive", "weight": 3 },
         { "tone": "light", "weight": 2 }
       ],
+      "religions": [
+        { "religion": "christianity", "weight": 90 },
+        { "religion": "atheism", "weight": 7 },
+        { "religion": "islam", "weight": 3 }
+      ],
       "birthplaces": ["Portugal", "Spain", "Italy", "Malta", "Greece"]
     },
     {
@@ -200,6 +273,11 @@
         { "tone": "light", "weight": 4 },
         { "tone": "medium", "weight": 3 },
         { "tone": "olive", "weight": 2 }
+      ],
+      "religions": [
+        { "religion": "christianity", "weight": 97 },
+        { "religion": "atheism", "weight": 2 },
+        { "religion": "islam", "weight": 0.6 }
       ],
       "birthplaces": [
         "France",
@@ -218,6 +296,11 @@
         { "tone": "pale", "weight": 3 },
         { "tone": "medium", "weight": 2 }
       ],
+      "religions": [
+        { "religion": "christianity", "weight": 97 },
+        { "religion": "atheism", "weight": 2 },
+        { "religion": "islam", "weight": 0.6 }
+      ],
       "birthplaces": ["Finland", "Sweden", "Norway", "Denmark", "Iceland"]
     },
     {
@@ -226,6 +309,11 @@
         { "tone": "light", "weight": 4 },
         { "tone": "medium", "weight": 3 },
         { "tone": "olive", "weight": 2 }
+      ],
+      "religions": [
+        { "religion": "christianity", "weight": 90 },
+        { "religion": "islam", "weight": 8 },
+        { "religion": "atheism", "weight": 2 }
       ],
       "birthplaces": [
         "Romania",
@@ -255,10 +343,20 @@
         { "tone": "light", "weight": 4 },
         { "tone": "medium", "weight": 3 }
       ],
+      "religions": [
+        { "religion": "christianity", "weight": 50 },
+        { "religion": "atheism", "weight": 40 },
+        { "religion": "islam", "weight": 8 },
+        { "religion": "hinduism", "weight": 2 }
+      ],
       "birthplaces": ["Ireland", "Great Britain (UK)"]
     },
     {
       "name": "latin american",
+      "religions": [
+        { "religion": "christianity", "weight": 96 },
+        { "religion": "atheism", "weight": 4 }
+      ],
       "skin_tones": [
         { "tone": "light", "weight": 3 },
         { "tone": "medium", "weight": 4 },
@@ -281,6 +379,10 @@
     },
     {
       "name": "central american",
+      "religions": [
+        { "religion": "christianity", "weight": 96 },
+        { "religion": "atheism", "weight": 4 }
+      ],
       "skin_tones": [
         { "tone": "light", "weight": 3 },
         { "tone": "medium", "weight": 4 },
@@ -298,6 +400,10 @@
     },
     {
       "name": "north american",
+      "religions": [
+        { "religion": "christianity", "weight": 96 },
+        { "religion": "atheism", "weight": 4 }
+      ],
       "skin_tones": [
         { "tone": "fair", "weight": 4 },
         { "tone": "light", "weight": 4 },
