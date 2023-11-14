@@ -289,6 +289,16 @@
       "name": "cooperative",
       "type": "positive",
       "contradictions": ["overly competitive"]
+    },
+    {
+      "name": "lustful",
+      "type": "negative",
+      "contradictions": ["chaste"]
+    },
+    {
+      "name": "chaste",
+      "type": "positive",
+      "contradictions": ["lustful"]
     }
   ],
   "count": 50
