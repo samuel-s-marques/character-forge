@@ -48,107 +48,95 @@ npm install character-forge
 
    ```javascript
    {
-      name: 'William',
-      nickname: 'Will',
-      surname: 'Gonzalez',
-      sex: 'male',
+      seed: 0.45064322790130973,
+      name: 'Olivia',
+      nickname: 'Liv',
+      surname: 'Garcia',
+      sex: 'female',
       pronouns: {
-         subjectPronoun: 'he',
-         objectPronoun: 'him',
-         possessiveAdjective: 'his',
-         possessivePronoun: 'his'
+         subjectPronoun: 'she',
+         objectPronoun: 'her',
+         possessiveAdjective: 'her',
+         possessivePronoun: 'hers'
       },
-      age: 44,
-      hairColor: 'silver',
-      eyeColor: 'amber',
-      hairStyle: 'dreadlocks',
+      age: 33,
+      hairColor: 'mahogany',
+      eyeColor: 'blue',
+      hairStyle: 'undercut',
       bodyType: {
-         type: 'slim',
-         height: 1.972212617751488,
-         weight: 62.18057860459511
+         type: 'chubby',
+         height: 1.6057030973606743,
+         weight: 88.69564021937549
       },
       clothings: {
          headwear: undefined,
-         outerwear: undefined,
-         upperbody: 'tank top',
-         lowerbody: 'joggers',
-         footwear: 'chelsea boots',
+         outerwear: 'ski jacket',
+         upperbody: 'sweatshirt',
+         lowerbody: 'corduroy pants',
+         footwear: 'flip-flops',
          accessories: []
       },
-      ethnicity: 'south asian',
-      birthplace: 'Sri Lanka',
+      ethnicity: 'east asian',
+      skinTone: 'light',
+      birthplace: 'South Korea',
+      religion: 'buddhism',
       sexuality: {
-         sexuality: 'bissexual',
+         sexuality: 'asexual',
          relationshipStatus: 'single',
-         pastPartners: 5,
-         seriousRelationship: 2,
+         pastPartners: 2,
+         seriousRelationship: 4,
          relationshipHistory: [
             {
-            partner: { name: 'Zachary', surname: 'Garcia', age: 50 },
-            nature: 'serious',
-            duration: 'short-term'
+             partner: { name: 'Ava', surname: 'Johnson', age: 35 },
+             nature: 'serious',
+             duration: 'short-term'
             },
             {
-            partner: { name: 'Isabella', surname: 'Davis', age: 39 },
-            nature: 'serious',
-            duration: 'long-term'
-            },
-            {
-            partner: { name: 'Kevin', surname: 'Williams', age: 21 },
-            nature: 'serious',
-            duration: 'short-term'
-            },
-            {
-            partner: { name: 'Felix', surname: 'Jackson', age: 47 },
-            nature: 'serious',
-            duration: 'long-term'
-            },
-            {
-            partner: { name: 'Abigail', surname: 'Johnson', age: 20 },
-            nature: 'casual',
-            duration: 'short-term'
+              partner: { name: 'Benjamin', surname: 'Martin', age: 33 },
+              nature: 'serious',
+              duration: 'short-term'
             }
          ]
       },
-      occupation: 'doctor',
+      occupation: 'cleaner',
       phobia: undefined,
       personalityTraits: [
          {
-            name: 'arrogant',
+            name: 'disorganized',
             type: 'negative',
-            contradictions: [ 'humble' ]
+            contradictions: [ 'organized' ]
          },
          {
-            name: 'apathetic',
-            type: 'negative',
-            contradictions: [ 'empathetic' ]
-         },
-         {
-            name: 'accepting',
+            name: 'intuitive',
             type: 'positive',
-            contradictions: [ 'accepting' ]
+            contradictions: [ 'analytic' ]
          },
          {
-            name: 'lethargic',
-            type: 'negative',
-            contradictions: [ 'energetic' ]
-         },
-         {
-            name: 'trusting',
+            name: 'confident',
             type: 'positive',
-            contradictions: [ 'cynical' ]
+            contradictions: [ 'insecure' ]
+         },
+         {
+            name: 'humble',
+            type: 'positive',
+            contradictions: [ 'arrogant' ]
+         },
+         {
+            name: 'open-minded',
+            type: 'positive',
+            contradictions: [ 'closed-minded' ]
          }
       ],
-      socialClass: 'working class',
-      politicalView: 'left',
-      hobbies: [ 'cycling', 'snorkeling', 'photography' ],
-      alignment: 'lawful evil',
-      summary: 'William "Will" Gonzalez, a 44-year-old doctor, finds fulfillment in cycling, snorkeling, and photography. He exudes accepting, and trusting traits. Although occasional arrogant, apathetic, and lethargic traits tendencies arise.\n' +
+      socialClass: 'underclass',
+      politicalView: 'center',
+      hobbies: [ 'chess', 'baking', 'backpacking' ],
+      alignment: 'lawful neutral',
+      summary: 'Olivia "Liv" Garcia, 33, is a cleaner with a penchant for chess, baking, and backpacking. She radiates intuitive, confident, humble, and open-minded traits.     A touch of disorganized traits surfaces now and then.\n' +
          '\n' +
-         'Hailing from Sri Lanka, William takes pride in his South asian heritage. His journey as doctor is colored by his experiences.\n' +
+         'Hailing from South Korea, Olivia takes pride in her East asian heritage. Her role as cleaner sheds light on her perspectives.\n' +
          '\n' +
-         'In terms of appearance, William boasts a slim frame with 62.18 kg, and stands at 1.97m. His silver dreadlocks hair is usually neatly combed, complementing his amber eyes.'
-   }
+         'Physically, Olivia is chubby and stands at 1.61m with 88.70 kg. She has mahogany undercut hair and blue eyes.'
+      }
    ```
 
 You can can also use modules to retrieve specific details.
