@@ -163,7 +163,43 @@
     {
       "name": "charity work",
       "type": "volunteering"
+    },
+    {
+      "name": "gardening",
+      "type": "outdoor recreation"
+    },
+    {
+      "name": "meditation",
+      "type": "spiritual"
+    },
+    {
+      "name": "cooking",
+      "type": "culinary"
+    },
+    {
+      "name": "writing",
+      "type": "creative"
+    },
+    {
+      "name": "podcasting",
+      "type": "creative"
+    },
+    {
+      "name": "traveling",
+      "type": "leisure"
+    },
+    {
+      "name": "reading comics",
+      "type": "leisure"
+    },
+    {
+      "name": "clubbing",
+      "type": "leisure"
+    },
+    {
+      "name": "bowling",
+      "type": "leisure"
     }
   ],
-  "count": 41
+  "count": 50
 }
