@@ -1,4 +1,5 @@
 import * as mod from "./index";
+import { Hobby } from "./modules/hobbies";
 import { splitmix32 } from "./utils/splitmix32";
 
 export interface Character {
@@ -24,7 +25,7 @@ export interface Character {
   personalityTraits: mod.PersonalityTrait[];
   socialClass: string;
   politicalView: string;
-  hobbies: string[];
+  hobbies: Hobby[];
   alignment: string;
   summary: string;
 }
@@ -103,7 +104,7 @@ export class CharacterForge {
     const skinTone =
       this.ethnicitiesModule.getRandomSkinToneFromEthnicity(ethnicity);
     const sexuality = this.sexualitiesModule.getSexuality(age, sex);
-    const hobbies = this.hobbiesModule.getRandomHobbies(1, 3);
+    const hobbies = this.hobbiesModule.getRandomHobbies(2, 4);
     const alignment = this.alignmentsModule.getRandomAlignment();
     const phobia = this.phobiasModule.getRandomPhobia();
     const politicalView = this.politicsModule.getRandomPolitic();
