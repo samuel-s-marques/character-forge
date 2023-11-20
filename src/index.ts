@@ -6,7 +6,7 @@ import { EthnicitiesModule } from "./modules/ethnicities";
 import { EyeColorsModule } from "./modules/eyecolors";
 import { HairColorsModule } from "./modules/haircolors";
 import { HairStylesModule } from "./modules/hairstyles";
-import { HobbiesModule } from "./modules/hobbies";
+import { HobbiesModule, Hobby } from "./modules/hobbies";
 import { NamesModule } from "./modules/names";
 import { OccupationsModule } from "./modules/occupations";
 import {
@@ -40,6 +40,7 @@ export {
   PoliticsModule,
   HairStylesModule,
   HobbiesModule,
+  Hobby,
   NamesModule,
   OccupationsModule,
   PersonalityTraitModule,
