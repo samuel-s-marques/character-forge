@@ -48,6 +48,18 @@
       "toned": {
         "heightRange": [1.7, 2.0],
         "weightRange": [80, 110]
+      },
+      "statuesque": {
+        "heightRange": [1.85, 2.0],
+        "weightRange": [85, 115]
+      },
+      "plump": {
+        "heightRange": [1.6, 1.85],
+        "weightRange": [85, 135]
+      },
+      "curvy": {
+        "heightRange": [1.65, 1.9],
+        "weightRange": [70, 115]
       }
     },
     "female": {
@@ -71,10 +83,6 @@
         "heightRange": [1.55, 1.8],
         "weightRange": [55, 90]
       },
-      "petite": {
-        "heightRange": [1.4, 1.6],
-        "weightRange": [35, 55]
-      },
       "chubby": {
         "heightRange": [1.5, 1.75],
         "weightRange": [60, 100]
@@ -87,10 +95,6 @@
         "heightRange": [1.6, 1.85],
         "weightRange": [45, 75]
       },
-      "voluptuous": {
-        "heightRange": [1.6, 1.9],
-        "weightRange": [50, 90]
-      },
       "obese": {
         "heightRange": [1.5, 1.8],
         "weightRange": [100, 180]
@@ -99,13 +103,25 @@
         "heightRange": [1.75, 1.9],
         "weightRange": [60, 100]
       },
-      "boyish": {
-        "heightRange": [1.5, 1.7],
-        "weightRange": [40, 70]
-      },
       "plump": {
         "heightRange": [1.5, 1.75],
         "weightRange": [70, 120]
+      },
+      "v-shaped": {
+        "heightRange": [1.6, 1.8],
+        "weightRange": [65, 85]
+      },
+      "slender": {
+        "heightRange": [1.5, 1.9],
+        "weightRange": [45, 75]
+      },
+      "fit": {
+        "heightRange": [1.6, 1.9],
+        "weightRange": [65, 85]
+      },
+      "toned": {
+        "heightRange": [1.6, 1.9],
+        "weightRange": [65, 95]
       }
     }
   },
