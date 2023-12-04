@@ -72,9 +72,8 @@
         { "religion": "sunni islam", "weight": 83 },
         { "religion": "buddhism", "weight": 7.3 },
         { "religion": "shia islam", "weight": 3.2 },
-        { "religion": "eastern christianity", "weight": 3.2 },
+        { "religion": "christianity", "weight": 3.6 },
         { "religion": "atheism", "weight": 2 },
-        { "religion": "western christianity", "weight": 0.4 },
         { "religion": "judaism", "weight": 0.02 },
         { "religion": "zoroastrianism", "weight": 0.01 }
       ],
