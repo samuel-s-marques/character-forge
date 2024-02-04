@@ -117,6 +117,222 @@
       "type": "science"
     },
     {
+      "name": "microscopy",
+      "type": "science"
+    },
+    {
+      "name": "model rocketry",
+      "type": "science"
+    },
+    {
+      "name": "model airplanes",
+      "type": "science"
+    },
+    {
+      "name": "spelunking",
+      "type": "outdoor recreation"
+    },
+    {
+      "name": "coins",
+      "type": "collecting"
+    },
+    {
+      "name": "stamps",
+      "type": "collecting"
+    },
+    {
+      "name": "antiques",
+      "type": "collecting"
+    },
+    {
+      "name": "wine",
+      "type": "collecting"
+    },
+    {
+      "name": "swords",
+      "type": "collecting"
+    },
+    {
+      "name": "artwork",
+      "type": "collecting"
+    },
+    {
+      "name": "fossils",
+      "type": "collecting"
+    },
+    {
+      "name": "miniature figures",
+      "type": "collecting"
+    },
+    {
+      "name": "action figures",
+      "type": "collecting"
+    },
+    {
+      "name": "classic video game",
+      "type": "collecting"
+    },
+    {
+      "name": "fishing",
+      "type": "outdoor recreation"
+    },
+    {
+      "name": "surfing",
+      "type": "sports"
+    },
+    {
+      "name": "skateboarding",
+      "type": "sports"
+    },
+    {
+      "name": "snowboarding",
+      "type": "sports"
+    },
+    {
+      "name": "skiing",
+      "type": "sports"
+    },
+    {
+      "name": "snowshoeing",
+      "type": "sports"
+    },
+    {
+      "name": "ice skating",
+      "type": "sports"
+    },
+    {
+      "name": "roller skating",
+      "type": "sports"
+    },
+    {
+      "name": "rollerblading",
+      "type": "sports"
+    },
+    {
+      "name": "skateboarding",
+      "type": "sports"
+    },
+    {
+      "name": "kayaking",
+      "type": "sports"
+    },
+    {
+      "name": "canoeing",
+      "type": "sports"
+    },
+    {
+      "name": "rafting",
+      "type": "sports"
+    },
+    {
+      "name": "sailing",
+      "type": "sports"
+    },
+    {
+      "name": "boating",
+      "type": "sports"
+    },
+    {
+      "name": "paddleboarding",
+      "type": "sports"
+    },
+    {
+      "name": "wakeboarding",
+      "type": "sports"
+    },
+    {
+      "name": "waterskiing",
+      "type": "sports"
+    },
+    {
+      "name": "parasailing",
+      "type": "sports"
+    },
+    {
+      "name": "kiteboarding",
+      "type": "sports"
+    },
+    {
+      "name": "skydiving",
+      "type": "sports"
+    },
+    {
+      "name": "bungee jumping",
+      "type": "sports"
+    },
+    {
+      "name": "base jumping",
+      "type": "sports"
+    },
+    {
+      "name": "paragliding",
+      "type": "sports"
+    },
+    {
+      "name": "hang gliding",
+      "type": "sports"
+    },
+    {
+      "name": "kite flying",
+      "type": "sports"
+    },
+    {
+      "name": "horseback riding",
+      "type": "sports"
+    },
+    {
+      "name": "hearts",
+      "type": "card games"
+    },
+    {
+      "name": "cribbage",
+      "type": "card games"
+    },
+    {
+      "name": "whist",
+      "type": "card games"
+    },
+    {
+      "name": "backgammon",
+      "type": "board games"
+    },
+    {
+      "name": "checkers",
+      "type": "board games"
+    },
+    {
+      "name": "Risk",
+      "type": "board games"
+    },
+    {
+      "name": "Monopoly",
+      "type": "board games"
+    },
+    {
+      "name": "Uno",
+      "type": "card games"
+    },
+    {
+      "name": "go",
+      "type": "board games"
+    },
+    {
+      "name": "Mahjong",
+      "type": "board games"
+    },
+    {
+      "name": "Clue",
+      "type": "board games"
+    },
+    {
+      "name": "Battleship",
+      "type": "board games"
+    },
+    {
+      "name": "The Game of Life",
+      "type": "board games"
+    },
+    {
       "name": "programming",
       "type": "technology"
     },
@@ -154,6 +370,14 @@
     },
     {
       "name": "tarot and oracle card readings",
+      "type": "spiritual"
+    },
+    {
+      "name": "astrology",
+      "type": "spiritual"
+    },
+    {
+      "name": "crystal healing",
       "type": "spiritual"
     },
     {
